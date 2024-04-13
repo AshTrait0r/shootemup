@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c22gllthlwqpm" path="res://assets/spaceshooter/Backgrounds/blue.png" id="1"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="2"]
 [ext_resource type="Script" path="res://Main.gd" id="4"]
-[ext_resource type="PackedScene" uid="uid://b08lpxupe4h7c" path="res://Player.tscn" id="4_xjpci"]
+[ext_resource type="PackedScene" uid="uid://vam042h4qhcq" path="res://Player.tscn" id="4_xjpci"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(724.75, 54.5)
