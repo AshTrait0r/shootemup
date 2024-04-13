@@ -1,5 +1,8 @@
 extends Node
 
+
+var allwords = []
+
 var words = [
 	"привет",
 	"пока",
@@ -75,18 +78,35 @@ var special_characters = [
 	"?"
 ]
 
-#func load_dictionary():
-	#var file = FileAccess.open("russiandicktionary.txt", FileAccess.READ)
-	#var content = file.get_as_text()
-	#var strarr = str_to_var(content)
-	#file.close()
-	#return strarr
+func load_dictionary():
+
+	var current_language = Global.current_language
+	var file = FileAccess.open("assets/englishdictionary.txt", FileAccess.READ)
+
+	if current_language == "rus":
+		file = FileAccess.open("assets/russiandicktionary.txt", FileAccess.READ)
+	if current_language == "eng":
+		file = FileAccess.open("assets/englishdictionary.txt", FileAccess.READ)
+		
+	var content = file.get_as_text()
+	print(content)
+	var strarr = content.split("\n")
+	file.close()
+	return strarr
 
 func get_prompt() -> String:
-	var word_index = randi() % words.size()
+	
+	if allwords.is_empty():
+		allwords = load_dictionary()
+	else:
+		print(allwords[0])
+	
+	var word_index = randi() % allwords.size()
 	var special_index = randi() % special_characters.size()
 
-	var word = words[word_index]
+	var word = allwords[word_index]
+	if word == "":
+		word = allwords[word_index-1]
 	#var special_character = special_characters[special_index]
 
 	var actual_word = word.substr(0, 1).to_upper() + word.substr(1).to_lower()

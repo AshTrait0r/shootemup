@@ -2,7 +2,6 @@ extends Node2D
 
 var Enemy = preload("res://Enemy.tscn")
 
-
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
 @onready var spawn_timer = $SpawnTimer
@@ -10,6 +9,7 @@ var Enemy = preload("res://Enemy.tscn")
 
 @onready var difficulty_value = $CanvasLayer/HBoxContainer2/DifficultyValue
 @onready var killed_value = $CanvasLayer/HBoxContainer/EnemiesKilledValue
+@onready var start_screen = $CanvasLayer/StartScreen
 @onready var game_over_screen = $CanvasLayer/GameOverScreen
 @onready var game_over_killed_value = $CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/HBoxContainer2/GameOverKilledValue
 @onready var accuracy_value = $CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/HBoxContainer/AccuracyValue
@@ -27,8 +27,12 @@ var firstletters: Array
 
 
 func _ready() -> void:
-	start_game()
+	show_start_screen()
 
+
+func show_start_screen():
+	game_over_screen.hide()
+	start_screen.show()
 
 func find_new_active_enemy(typed_character: String):
 	for enemy in enemy_container.get_children():
@@ -48,13 +52,17 @@ func find_new_active_enemy(typed_character: String):
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		#var typed_event = event as InputEventKey
-		#var key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
-		var key_typed: String
-		var string_letter = event.as_text()
-		print(string_letter)
-		key_typed = returntypedkey(string_letter)
-
+		var typed_event
+		var key_typed
+		var current_language = Global.current_language
+		if current_language == "eng":
+			typed_event = event as InputEventKey
+			key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
+		if current_language == "rus":
+			var string_letter = event.as_text()
+			print(string_letter)
+			key_typed = returntypedkey(string_letter)
+			
 		if active_enemy == null:
 			find_new_active_enemy(key_typed)
 		else:
@@ -137,6 +145,7 @@ func game_over():
 
 func start_game():
 	game_over_screen.hide()
+	start_screen.hide()
 	difficulty = 0
 	enemies_killed = 0
 	correctlytyped = 0
@@ -151,7 +160,14 @@ func start_game():
 
 func _on_RestartButton_pressed() -> void:
 	start_game()
-
+	
+func _on_ChooseRussian_pressed() -> void:
+	Global.current_language = "rus"
+	start_game()
+	
+func _on_ChooseEnglish_pressed() -> void:
+	Global.current_language = "eng"
+	start_game()
 
 func returntypedkey(typed_character: String):
 	var key_typed: String

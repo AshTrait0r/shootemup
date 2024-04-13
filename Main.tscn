@@ -79,6 +79,42 @@ autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="StartScreen" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StartScreen"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/StartScreen/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Title" type="Label" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+text = "Русы против ящеров на клавиатуре"
+horizontal_alignment = 1
+
+[node name="ChooseLanguage" type="Label" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+text = "Выберите язык"
+horizontal_alignment = 1
+
+[node name="ChooseRussian" type="Button" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+text = "Русский"
+
+[node name="ChooseEnglish" type="Button" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+text = "English"
+
 [node name="GameOverScreen" type="PanelContainer" parent="CanvasLayer"]
 visible = false
 anchors_preset = 15
@@ -171,4 +207,6 @@ text = "0"
 [connection signal="body_entered" from="LoseArea" to="." method="_on_LoseArea_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="DifficultyTimer" to="." method="_on_DifficultyTimer_timeout"]
+[connection signal="pressed" from="CanvasLayer/StartScreen/CenterContainer/VBoxContainer/ChooseRussian" to="." method="_on_ChooseRussian_pressed"]
+[connection signal="pressed" from="CanvasLayer/StartScreen/CenterContainer/VBoxContainer/ChooseEnglish" to="." method="_on_ChooseEnglish_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
