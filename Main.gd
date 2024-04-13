@@ -73,6 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			var next_character = prompt.substr(current_letter_index, 1)
 			if key_typed == next_character:
 				print("successfully typed %s" % key_typed)
+				player_node.direction = active_enemy.global_position
 				player_node.shoot(active_enemy)
 				correctlytyped += 1
 				print(correctlytyped)
