@@ -5,11 +5,15 @@ extends CharacterBody2D
 @export var green = Color("#639765")
 @export var red = Color("#a65455")
 
-@export_range(0,20,0.1) var speed: float
+@export_range(0,1000,0.1) var speed: float
 
 
 @onready var prompt = $RichTextLabel
 @onready var prompt_text = prompt.text
+
+var player_position
+var target_position
+@onready var player = get_parent().get_parent().get_node("Player")
 
 
 func _ready() -> void:
@@ -19,7 +23,15 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	global_position.y += speed
+	
+	player_position = player.position
+	target_position = (player_position - position).normalized()
+	position += (player.position - position)/speed
+	#velocity.y = speed
+	#velocity.x = speed
+	#move_and_slide()
+	#look_at(player.position)
+	#global_position.y += speed
 
 
 func set_difficulty(difficulty: int):
@@ -28,7 +40,7 @@ func set_difficulty(difficulty: int):
 
 func handle_difficulty_increased(new_difficulty: int):
 	#var new_speed = speed + (0.125 * new_difficulty)
-	speed = 2 + (0.125 * new_difficulty)
+	speed = 200 + (12.5 * new_difficulty)
 
 
 

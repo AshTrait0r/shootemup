@@ -1,9 +1,11 @@
 extends Node2D
 
 var Enemy = preload("res://Enemy.tscn")
+var Player = preload("res://Player.tscn")
 
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
+@onready var player_node = $PlayerNode
 @onready var spawn_timer = $SpawnTimer
 @onready var difficulty_timer = $DifficultyTimer
 
@@ -52,16 +54,17 @@ func find_new_active_enemy(typed_character: String):
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		var typed_event
+		var typed_event = event as InputEventKey
 		var key_typed
 		var current_language = Global.current_language
-		if current_language == "eng":
-			typed_event = event as InputEventKey
-			key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
-		if current_language == "rus":
-			var string_letter = event.as_text()
-			print(string_letter)
-			key_typed = returntypedkey(string_letter)
+		key_typed = String.chr(typed_event.unicode)
+		#if current_language == "eng":	
+			#key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
+			#key_typed = String.chr(typed_event.unicode)
+		#if current_language == "rus":
+			#var string_letter = typed_event.as_text()
+			#print(string_letter)
+			#key_typed = returntypedkey(string_letter)
 			
 		if active_enemy == null:
 			find_new_active_enemy(key_typed)
@@ -90,7 +93,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_SpawnTimer_timeout() -> void:
 	spawn_enemy()
-
 
 
 func spawn_enemy():
@@ -169,70 +171,3 @@ func _on_ChooseEnglish_pressed() -> void:
 	Global.current_language = "eng"
 	start_game()
 
-func returntypedkey(typed_character: String):
-	var key_typed: String
-	if typed_character == "Q":
-			key_typed = "й"
-	if typed_character == "W":
-		key_typed = "ц"
-	if typed_character == "E":
-		key_typed = "у"
-	if typed_character == "R":
-		key_typed = "к"
-	if typed_character == "T":
-		key_typed = "е"
-	if typed_character == "Y":
-		key_typed = "н"
-	if typed_character == "U":
-		key_typed = "г"
-	if typed_character == "I":
-		key_typed = "ш"
-	if typed_character == "O":
-		key_typed = "щ"
-	if typed_character == "P":
-		key_typed = "з"
-	if typed_character == "BracketLeft":
-		key_typed = "х"
-	if typed_character == "BracketRight":
-		key_typed = "ъ"
-	if typed_character == "A":
-		key_typed = "ф"
-	if typed_character == "S":
-		key_typed = "ы"
-	if typed_character == "D":
-		key_typed = "в"
-	if typed_character == "F":
-		key_typed = "а"
-	if typed_character == "G":
-		key_typed = "п"
-	if typed_character == "H":
-		key_typed = "р"
-	if typed_character == "J":
-		key_typed = "о"
-	if typed_character == "K":
-		key_typed = "л"
-	if typed_character == "L":
-		key_typed = "д"
-	if typed_character == "Semicolon":
-		key_typed = "ж"
-	if typed_character == "Apostrophe":
-		key_typed = "э"
-	if typed_character == "Z":
-		key_typed = "я"
-	if typed_character == "X":
-		key_typed = "ч"
-	if typed_character == "C":
-		key_typed = "с"
-	if typed_character == "V":
-		key_typed = "м"
-	if typed_character == "B":
-		key_typed = "и"
-	if typed_character == "N":
-		key_typed = "т"
-	if typed_character == "M":
-		key_typed = "ь"
-	if typed_character == "Comma":
-		key_typed = "б"
-	if typed_character == "Period":
-		key_typed = "ю"
-	return key_typed

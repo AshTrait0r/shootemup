@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtwm5gj2hvijf"]
+[gd_scene load_steps=9 format=3 uid="uid://dtwm5gj2hvijf"]
 
 [ext_resource type="Texture2D" uid="uid://c22gllthlwqpm" path="res://assets/spaceshooter/Backgrounds/blue.png" id="1"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="2"]
 [ext_resource type="Script" path="res://Main.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://b08lpxupe4h7c" path="res://Player.tscn" id="4_xjpci"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(724.75, 54.5)
@@ -203,6 +204,9 @@ text = "Difficulty:"
 layout_mode = 2
 theme_override_fonts/font = SubResource("4")
 text = "0"
+
+[node name="Player" parent="." instance=ExtResource("4_xjpci")]
+position = Vector2(282, 874)
 
 [connection signal="body_entered" from="LoseArea" to="." method="_on_LoseArea_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
