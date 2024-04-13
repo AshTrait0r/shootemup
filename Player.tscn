@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://vam042h4qhcq"]
+[gd_scene load_steps=4 format=3 uid="uid://b08lpxupe4h7c"]
 
+[ext_resource type="Texture2D" uid="uid://ciwgqwi3cc2on" path="res://assets/spaceshooter/Spritesheet/sheet.png" id="1_b3mna"]
 [ext_resource type="Script" path="res://Player.gd" id="1_jxk6l"]
-[ext_resource type="PackedScene" uid="uid://b53xi1jf8x146" path="res://Player.ase" id="2_y5mom"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tc6n"]
-size = Vector2(281.07, 239.125)
+size = Vector2(99.2805, 91.5007)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_jxk6l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_4tc6n")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_b3mna")
+region_enabled = true
+region_rect = Rect2(408, 900, 97, 91)
 
-[node name="Player" parent="." instance=ExtResource("2_y5mom")]
-position = Vector2(0, -2)
-autoplay = "default"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.49012e-08, 1)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_4tc6n")

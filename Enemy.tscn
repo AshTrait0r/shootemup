@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7wkfcwegnan7"]
 
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="1"]
+[ext_resource type="Texture2D" uid="uid://ciwgqwi3cc2on" path="res://assets/spaceshooter/Spritesheet/sheet.png" id="2"]
 [ext_resource type="Script" path="res://Enemy.gd" id="3"]
-[ext_resource type="PackedScene" uid="uid://y0c36ukldyko" path="res://Skeleton2.ase" id="3_c4g43"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -29,11 +29,11 @@ bbcode_enabled = true
 text = "[center]Type this![/center]"
 scroll_active = false
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2")
+region_enabled = true
+region_rect = Rect2(408, 900, 97, 91)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("2")
-
-[node name="Skeleton3" parent="." instance=ExtResource("3_c4g43")]
-position = Vector2(0, -2)
-scale = Vector2(0.43, 0.47)
-autoplay = "default"
-frame_progress = 0.469436
