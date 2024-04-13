@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7wkfcwegnan7"]
+[gd_scene load_steps=14 format=3 uid="uid://c7wkfcwegnan7"]
 
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="1"]
-[ext_resource type="Texture2D" uid="uid://ciwgqwi3cc2on" path="res://assets/spaceshooter/Spritesheet/sheet.png" id="2"]
 [ext_resource type="Script" path="res://Enemy.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cnj55w25v2cj6" path="res://assets/Fantasy/Skeleton/Skeleton5.png" id="3_sqe18"]
+[ext_resource type="Texture2D" uid="uid://bitco2a6te1iu" path="res://assets/Fantasy/Skeleton/Skeleton4.png" id="4_q8tpw"]
+[ext_resource type="Texture2D" uid="uid://cduhy1106113g" path="res://assets/Fantasy/Skeleton/Skeleton3.png" id="5_iqnvj"]
+[ext_resource type="Texture2D" uid="uid://dae6f8jbsm7h2" path="res://assets/Fantasy/Skeleton/Skeleton2.png" id="6_u0xaj"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -15,6 +18,42 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(47.1221, 46.0029)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guh1c"]
+atlas = ExtResource("3_sqe18")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na1t4"]
+atlas = ExtResource("4_q8tpw")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blh4c"]
+atlas = ExtResource("5_iqnvj")
+region = Rect2(0, 0, 79, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfuat"]
+atlas = ExtResource("6_u0xaj")
+region = Rect2(0, 0, 92, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc6qm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guh1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na1t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blh4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfuat")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("3")
@@ -29,11 +68,13 @@ bbcode_enabled = true
 text = "[center]Type this![/center]"
 scroll_active = false
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2")
-region_enabled = true
-region_rect = Rect2(408, 900, 97, 91)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.456522, 0.44)
+sprite_frames = SubResource("SpriteFrames_gc6qm")
+autoplay = "default"
+frame = 3
+frame_progress = 0.31559
