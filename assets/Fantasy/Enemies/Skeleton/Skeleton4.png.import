@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnj55w25v2cj6"
-path="res://.godot/imported/Skeleton5.png-7a73b39956747323db47e510afae2e53.ctex"
+uid="uid://bitco2a6te1iu"
+path="res://.godot/imported/Skeleton4.png-45c668a54643e5d18e73e7b87d1bde3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fantasy/Skeleton/Skeleton5.png"
-dest_files=["res://.godot/imported/Skeleton5.png-7a73b39956747323db47e510afae2e53.ctex"]
+source_file="res://assets/Fantasy/Enemies/Skeleton/Skeleton4.png"
+dest_files=["res://.godot/imported/Skeleton4.png-45c668a54643e5d18e73e7b87d1bde3d.ctex"]
 
 [params]
 
