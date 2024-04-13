@@ -78,7 +78,7 @@ var special_characters = [
 	"?"
 ]
 
-func load_dictionary():
+func load_dictionary() -> Array:
 
 	var current_language = Global.current_language
 	var file = FileAccess.open("assets/englishdictionary.txt", FileAccess.READ)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://li82s5diygat"]
+
+[ext_resource type="Texture2D" uid="uid://dcunipbebhx1b" path="res://assets/Fantasy/Projectiles/Arrow1.png" id="1_ag1ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1t5t"]
+
+[node name="Projectile" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g1t5t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.164063, 0.164063)
+texture = ExtResource("1_ag1ge")
