@@ -125,8 +125,9 @@ func _on_DifficultyTimer_timeout() -> void:
 	difficulty_value.text = str(difficulty)
 
 
-func _on_LoseArea_body_entered(_body: Node) -> void:
-	game_over()
+func _on_LoseArea_body_entered(body: Node) -> void:
+	if body.get_parent().name == "EnemyContainer":
+		game_over()
 
 
 func game_over():

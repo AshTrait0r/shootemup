@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b08lpxupe4h7c" path="res://Player.tscn" id="4_xjpci"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(724.75, 54.5)
+size = Vector2(130, 121)
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -49,7 +49,7 @@ texture = ExtResource("1")
 position = Vector2(0, 5.55865)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea"]
-position = Vector2(289, 926.441)
+position = Vector2(281, 868.941)
 shape = SubResource("1")
 
 [node name="SpawnContainer" type="Node2D" parent="."]

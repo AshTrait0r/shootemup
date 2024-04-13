@@ -89,7 +89,6 @@ func load_dictionary():
 		file = FileAccess.open("assets/englishdictionary.txt", FileAccess.READ)
 		
 	var content = file.get_as_text()
-	print(content)
 	var strarr = content.split("\n")
 	file.close()
 	return strarr
@@ -98,8 +97,6 @@ func get_prompt() -> String:
 	
 	if allwords.is_empty():
 		allwords = load_dictionary()
-	else:
-		print(allwords[0])
 	
 	var word_index = randi() % allwords.size()
 	var special_index = randi() % special_characters.size()
