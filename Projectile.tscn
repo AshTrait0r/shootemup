@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://li82s5diygat"]
+[gd_scene load_steps=4 format=3 uid="uid://li82s5diygat"]
 
 [ext_resource type="Texture2D" uid="uid://dcunipbebhx1b" path="res://assets/Fantasy/Projectiles/Arrow1.png" id="1_ag1ge"]
+[ext_resource type="Script" path="res://Projectile.gd" id="1_pnwbc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1t5t"]
+size = Vector2(16, 81)
 
 [node name="Projectile" type="Area2D"]
+script = ExtResource("1_pnwbc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -10.5)
 shape = SubResource("RectangleShape2D_g1t5t")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.164063, 0.164063)
+[node name="Arrow1" type="Sprite2D" parent="."]
 texture = ExtResource("1_ag1ge")

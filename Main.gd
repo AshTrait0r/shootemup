@@ -1,11 +1,11 @@
 extends Node2D
 
-var Enemy = preload("res://Enemy.tscn")
-var Player = preload("res://Player.tscn")
+var EnemyLoad = preload("res://Enemy.tscn")
+var PlayerLoad = preload("res://Player.tscn")
 
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
-@onready var player_node = $PlayerNode
+@onready var player_node = $Player
 @onready var spawn_timer = $SpawnTimer
 @onready var difficulty_timer = $DifficultyTimer
 
@@ -73,6 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			var next_character = prompt.substr(current_letter_index, 1)
 			if key_typed == next_character:
 				print("successfully typed %s" % key_typed)
+				player_node.shoot(active_enemy)
 				correctlytyped += 1
 				print(correctlytyped)
 				current_letter_index += 1
@@ -96,7 +97,7 @@ func _on_SpawnTimer_timeout() -> void:
 
 
 func spawn_enemy():
-	var enemy_instance = Enemy.instantiate()
+	var enemy_instance: Enemy = EnemyLoad.instantiate()
 	#var spawns = spawn_container.get_children()
 	#var index = randi() % spawns.size()
 	var pos = global_position

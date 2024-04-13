@@ -40,8 +40,9 @@ scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_4tc6n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, -7)
+position = Vector2(1, -7)
 sprite_frames = SubResource("SpriteFrames_05q5e")
 autoplay = "default"
-frame = 1
-frame_progress = 0.310393
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(0, -64)
