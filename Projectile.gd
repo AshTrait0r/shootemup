@@ -9,7 +9,7 @@ var active_enemy: Enemy
 func _ready() -> void:
 	body_entered.connect(on_body_entered)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	position += (direction - position)/speed
 	look_at(direction)

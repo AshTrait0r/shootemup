@@ -206,7 +206,6 @@ wait_time = 5.0
 
 [node name="DifficultyTimer" type="Timer" parent="."]
 wait_time = 5.0
-autostart = true
 
 [node name="Player" parent="." instance=ExtResource("4_xjpci")]
 position = Vector2(282, 874)
