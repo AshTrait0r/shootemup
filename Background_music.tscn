@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://7w6ihfp4n7d0"]
+
+[ext_resource type="AudioStream" uid="uid://ds4fdcbk48flf" path="res://assets/Fantasy/Adventure.wav" id="1_24w5r"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_24w5r")
+autoplay = true

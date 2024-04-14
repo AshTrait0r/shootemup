@@ -5,6 +5,7 @@ var PlayerLoad = preload("res://Player.tscn")
 
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
+@onready var projectile_container = $ProjectileContainer
 @onready var player_node = $Player
 @onready var spawn_timer = $SpawnTimer
 @onready var difficulty_timer = $DifficultyTimer
@@ -41,7 +42,7 @@ func find_new_active_enemy(typed_character: String):
 		var prompt = enemy.get_prompt()
 		var next_character = prompt.substr(0, 1)
 		firstletters.append(next_character)
-		if next_character == typed_character or next_character == typed_character.to_upper():
+		if next_character == typed_character or next_character == typed_character.to_upper() or next_character == typed_character.to_lower():
 			print("found new enemy that starts with %s" % next_character.to_upper())
 			active_enemy = enemy
 			player_node.direction = active_enemy.global_position
@@ -73,7 +74,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			var prompt = active_enemy.get_prompt()
 			var next_character = prompt.substr(current_letter_index, 1)
-			if key_typed == next_character:
+			if next_character == key_typed or next_character == key_typed.to_lower():
 				print("successfully typed %s" % key_typed)
 				player_node.direction = active_enemy.global_position
 				player_node.shoot(active_enemy)
@@ -147,6 +148,8 @@ func game_over():
 	current_letter_index = -1
 	for enemy in enemy_container.get_children():
 		enemy.queue_free()
+	for projectile in projectile_container.get_children():
+		projectile.queue_free()
 
 
 func start_game():
