@@ -11,8 +11,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	
 	position += (direction - position)/speed
-	look_at(direction.rotated(deg_to_rad(-15)))
+	look_at(direction)
 
 func on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
+		body.get_damage()
 		queue_free()

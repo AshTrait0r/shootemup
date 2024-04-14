@@ -6,6 +6,9 @@ class_name Player
 @onready var spawn_point: Marker2D = $SpawnPoint
 var direction: Vector2
 
+func _ready() -> void:
+	rotate(deg_to_rad(-90))
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		shoot()

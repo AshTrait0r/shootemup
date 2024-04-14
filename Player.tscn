@@ -35,14 +35,17 @@ script = ExtResource("1_jxk6l")
 projectile = ExtResource("2_3remp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.98023e-08, 4.76837e-07)
+position = Vector2(-5, -7)
+rotation = 1.5708
 scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_4tc6n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -7)
+rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_05q5e")
 autoplay = "default"
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(52, -7)
+rotation = 1.5708

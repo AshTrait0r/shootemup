@@ -553,10 +553,10 @@ animations = [{
 script = ExtResource("3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -82.0
-offset_top = -67.0
-offset_right = 98.0
-offset_bottom = -33.0
+offset_left = -87.0
+offset_top = 36.0
+offset_right = 93.0
+offset_bottom = 70.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 0
@@ -568,6 +568,7 @@ bbcode_enabled = true
 text = "[center]Type this![/center]"
 scroll_active = false
 progress_bar_delay = 1005
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0.999999)
@@ -580,3 +581,8 @@ scale = Vector2(0.8, 0.771)
 sprite_frames = SubResource("SpriteFrames_gc6qm")
 autoplay = "default"
 frame_progress = 0.531565
+
+[node name="StunnedTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="StunnedTimer" to="." method="_on_stunned_timer_timeout"]

@@ -10,8 +10,10 @@ size = Vector2(16, 81)
 script = ExtResource("1_pnwbc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -10.5)
+position = Vector2(9, -1)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_g1t5t")
 
 [node name="Arrow1" type="Sprite2D" parent="."]
+rotation = 1.5708
 texture = ExtResource("1_ag1ge")

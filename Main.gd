@@ -44,6 +44,8 @@ func find_new_active_enemy(typed_character: String):
 		if next_character == typed_character or next_character == typed_character.to_upper():
 			print("found new enemy that starts with %s" % next_character.to_upper())
 			active_enemy = enemy
+			player_node.direction = active_enemy.global_position
+			player_node.shoot(active_enemy)
 			current_letter_index = 1
 			active_enemy.set_next_character(current_letter_index)
 			return
@@ -82,7 +84,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				if current_letter_index == prompt.length():
 					print("done")
 					current_letter_index = -1
-					active_enemy.queue_free()
 					active_enemy = null
 					enemies_killed += 1
 					killed_value.text = str(enemies_killed)
