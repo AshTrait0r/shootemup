@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_tn8v1"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="2_ionsd"]
-[ext_resource type="Texture2D" uid="uid://cnj55w25v2cj6" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton5.png" id="3_ptxur"]
-[ext_resource type="Texture2D" uid="uid://bitco2a6te1iu" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton4.png" id="4_on43o"]
-[ext_resource type="Texture2D" uid="uid://cduhy1106113g" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton3.png" id="5_yyb8d"]
-[ext_resource type="Texture2D" uid="uid://dae6f8jbsm7h2" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton2.png" id="6_yh225"]
+[ext_resource type="Texture2D" uid="uid://crg7rje6e1yyl" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute1.png" id="3_chbvc"]
+[ext_resource type="Texture2D" uid="uid://cgedcn1b0d6am" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute2.png" id="4_01b70"]
+[ext_resource type="Texture2D" uid="uid://b4g7cser1k1cs" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute3.png" id="5_70iu5"]
+[ext_resource type="Texture2D" uid="uid://d1rk0jifg8wnn" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute4.png" id="6_ya6ic"]
+[ext_resource type="Texture2D" uid="uid://1yn35p6qh28k" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute5.png" id="7_3vpwt"]
+[ext_resource type="Texture2D" uid="uid://de1itsjqsshq5" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute6.png" id="8_wd0p2"]
+[ext_resource type="Texture2D" uid="uid://suboxapdk4jd" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute7.png" id="9_x1het"]
+[ext_resource type="Texture2D" uid="uid://cidepo4intrwi" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute8.png" id="10_j4vdl"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2_ionsd")])
@@ -511,38 +515,34 @@ cache/0/21/0/kerning_overrides/20/0 = Vector2(0, 0)
 cache/0/21/0/kerning_overrides/21/0 = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(24.6667, 46.6667)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_guh1c"]
-atlas = ExtResource("3_ptxur")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_na1t4"]
-atlas = ExtResource("4_on43o")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_blh4c"]
-atlas = ExtResource("5_yyb8d")
-region = Rect2(0, 0, 79, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfuat"]
-atlas = ExtResource("6_yh225")
-region = Rect2(0, 0, 92, 100)
+size = Vector2(28.3333, 28.8333)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gc6qm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_guh1c")
+"texture": ExtResource("3_chbvc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_na1t4")
+"texture": ExtResource("4_01b70")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_blh4c")
+"texture": ExtResource("5_70iu5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wfuat")
+"texture": ExtResource("6_ya6ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3vpwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wd0p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x1het")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j4vdl")
 }],
 "loop": true,
 "name": &"default",
@@ -571,16 +571,16 @@ progress_bar_delay = 1005
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 0.999999)
+position = Vector2(-0.250002, -0.625002)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
-scale = Vector2(0.8, 0.771)
+scale = Vector2(1.36875, 1.31913)
 sprite_frames = SubResource("SpriteFrames_gc6qm")
 autoplay = "default"
-frame_progress = 0.531565
+frame_progress = 0.968926
 
 [node name="StunnedTimer" type="Timer" parent="."]
 wait_time = 0.2
