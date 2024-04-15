@@ -12,26 +12,21 @@ config_version=5
 
 config/name="Русы против ящеров на клавиатуре"
 config/version="0.1"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://global.gd"
-PromptList="*res://PromptList.gd"
-GlobalSignals="*res://GlobalSignals.gd"
-BackgroundMusic="*res://Background_music.tscn"
+Global="*res://Scripts/global.gd"
+PromptList="*res://Scripts/PromptList.gd"
+GlobalSignals="*res://Scripts/GlobalSignals.gd"
+BackgroundMusic="*res://Scenes/Background_music.tscn"
 
 [display]
 
 window/size/viewport_width=540
 window/size/viewport_height=960
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
 
 [input]
 

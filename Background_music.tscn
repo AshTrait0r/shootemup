@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://7w6ihfp4n7d0"]
-
-[ext_resource type="AudioStream" uid="uid://do4in66h6lcq4" path="res://assets/Fantasy/Music/Adventure.mp3" id="1_yug8y"]
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_yug8y")
-autoplay = true
