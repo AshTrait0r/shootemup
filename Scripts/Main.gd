@@ -1,6 +1,5 @@
 extends Node2D
 
-class_name GitPlugin
 #var EnemyLoad = preload("res://Enemy.tscn")
 #var PlayerLoad = preload("res://Player.tscn")
 @export var EnemyScene: PackedScene
