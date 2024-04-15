@@ -10,6 +10,7 @@ class_name Enemy
 @export_range(0,1000,0.1) var speed: float
 @export var health: int
 
+@onready var sprite = $AnimatedSprite2D
 @onready var prompt = $RichTextLabel
 @onready var prompt_text = prompt.text
 
@@ -21,6 +22,8 @@ var is_stunned = false
 
 
 func _ready() -> void:
+	if global_position.x > 270:
+		sprite.set_flip_h(true)
 	prompt_text = PromptList.get_prompt()
 	health = prompt_text.length()
 	prompt.parse_bbcode(set_center_tags(prompt_text))
@@ -29,6 +32,11 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	
+	if global_position.x > 270:
+		sprite.set_flip_h(true)
+	else:
+		sprite.set_flip_h(false)
+		
 	if is_stunned:
 		velocity = Vector2.ZERO
 		return
