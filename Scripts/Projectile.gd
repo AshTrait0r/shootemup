@@ -8,6 +8,7 @@ var speed: float = 5.0
 var active_enemy: Enemy
 
 func _ready() -> void:
+	rotate(deg_to_rad(-90))
 	body_entered.connect(on_body_entered)
 	deletion_timer.start()
 

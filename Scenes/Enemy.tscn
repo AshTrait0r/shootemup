@@ -1,10 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7wkfcwegnan7"]
+[gd_scene load_steps=18 format=3 uid="uid://c7wkfcwegnan7"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_tn8v1"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="2_ionsd"]
 [ext_resource type="Texture2D" uid="uid://crg7rje6e1yyl" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute1.png" id="3_chbvc"]
+[ext_resource type="Texture2D" uid="uid://dae6f8jbsm7h2" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton2.png" id="3_sfwfk"]
 [ext_resource type="Texture2D" uid="uid://cgedcn1b0d6am" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute2.png" id="4_01b70"]
+[ext_resource type="Texture2D" uid="uid://cduhy1106113g" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton3.png" id="4_rjmbs"]
 [ext_resource type="Texture2D" uid="uid://b4g7cser1k1cs" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute3.png" id="5_70iu5"]
+[ext_resource type="Texture2D" uid="uid://bitco2a6te1iu" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton4.png" id="5_cyu7x"]
+[ext_resource type="Texture2D" uid="uid://cnj55w25v2cj6" path="res://assets/Fantasy/Enemies/Skeleton/Skeleton5.png" id="6_dwckt"]
 [ext_resource type="Texture2D" uid="uid://d1rk0jifg8wnn" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute4.png" id="6_ya6ic"]
 [ext_resource type="Texture2D" uid="uid://1yn35p6qh28k" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute5.png" id="7_3vpwt"]
 [ext_resource type="Texture2D" uid="uid://de1itsjqsshq5" path="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute6.png" id="8_wd0p2"]
@@ -521,6 +525,23 @@ size = Vector2(28.6667, 52.6667)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_sfwfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rjmbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cyu7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dwckt")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_chbvc")
 }, {
 "duration": 1.0,
@@ -579,10 +600,14 @@ shape = SubResource("2")
 position = Vector2(3.8147e-06, -12)
 scale = Vector2(2.77813, 2.67741)
 sprite_frames = SubResource("SpriteFrames_gc6qm")
+animation = &"death"
 autoplay = "default"
-frame_progress = 0.968926
 
 [node name="StunnedTimer" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="StunnedTimer" to="." method="_on_stunned_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

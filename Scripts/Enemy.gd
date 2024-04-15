@@ -10,19 +10,21 @@ class_name Enemy
 @export_range(0,1000,0.1) var speed: float
 @export var health: int
 
-@onready var sprite = $AnimatedSprite2D
-@onready var prompt = $RichTextLabel
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var prompt: RichTextLabel = $RichTextLabel
 @onready var prompt_text = prompt.text
 
 var player_position
 var target_position
 @onready var player = get_parent().get_parent().get_node("Player")
-@onready var stunned_timer = $StunnedTimer
-var is_stunned = false
+@onready var stunned_timer: Timer = $StunnedTimer
+@onready var death_timer: Timer = $DeathTimer
+var is_stunned: bool = false
+var is_dead: bool = false
 
 
 func _ready() -> void:
-	if global_position.x > 270:
+	if global_position.x < 270:
 		sprite.set_flip_h(true)
 	prompt_text = PromptList.get_prompt()
 	health = prompt_text.length()
@@ -32,12 +34,12 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	
-	if global_position.x > 270:
+	if global_position.x < 270:
 		sprite.set_flip_h(true)
 	else:
 		sprite.set_flip_h(false)
 		
-	if is_stunned:
+	if is_stunned or is_dead:
 		velocity = Vector2.ZERO
 		return
 	
@@ -52,10 +54,16 @@ func get_damage() -> void:
 	stunned_timer.start()
 	health -= 1
 	if health == 0:
-		queue_free()
+		is_dead = true
+		sprite.animation = "death" 
+		death_timer.start()
+		#queue_free()
 
 func _on_stunned_timer_timeout():
 	is_stunned = false
+
+func _on_death_timer_timeout():
+	queue_free()
 
 func set_difficulty(difficulty: int):
 	handle_difficulty_increased(difficulty)
@@ -94,3 +102,4 @@ func get_bbcode_color_tag(color: Color) -> String:
 
 func get_bbcode_end_color_tag() -> String:
 	return "[/color]"
+

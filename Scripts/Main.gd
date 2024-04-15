@@ -30,7 +30,7 @@ var accuracy: float = 0
 var correctlytyped: float = 0
 var incorrectlytyped: float = 0
 var firstletters: Array
-
+@onready var spawn_timer_time: int = spawn_timer.wait_time
 
 func _ready() -> void:
 	show_start_screen()
@@ -94,7 +94,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					active_enemy = null
 					enemies_killed += 1
 					killed_value.text = str(enemies_killed)
-					if enemy_container.get_child_count() < 2:
+					if enemy_container.get_child_count() < 3:
 						spawn_enemy()
 			else:
 				print("incorrectly typed %s instead of %s" % [key_typed, next_character])
@@ -148,6 +148,7 @@ func game_over():
 		accuracy = correctlytyped * 100 / (correctlytyped+incorrectlytyped)
 	accuracy_value.text = str(snapped(accuracy,0.001))
 	game_over_screen.show()
+	spawn_timer.wait_time = spawn_timer_time
 	spawn_timer.stop()
 	difficulty_timer.stop()
 	active_enemy = null
