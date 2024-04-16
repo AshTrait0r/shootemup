@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crg7rje6e1yyl"
-path="res://.godot/imported/Skeleton-cute1.png-a3d0158e7665ec2b0037e8b73ebd6c10.ctex"
+uid="uid://bvf42vhscj0lk"
+path="res://.godot/imported/Skeleton-cute-death9.png-fa4348486de0e11cd9dc9ccb7412afe5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fantasy/Enemies/Skeleton_cute/Skeleton-cute1.png"
-dest_files=["res://.godot/imported/Skeleton-cute1.png-a3d0158e7665ec2b0037e8b73ebd6c10.ctex"]
+source_file="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png"
+dest_files=["res://.godot/imported/Skeleton-cute-death9.png-fa4348486de0e11cd9dc9ccb7412afe5.ctex"]
 
 [params]
 
