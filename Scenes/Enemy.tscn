@@ -563,6 +563,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_m7vsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m7vsf")
 }],
 "loop": true,
 "name": &"death",
