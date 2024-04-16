@@ -1,26 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7wkfcwegnan7"]
+[gd_scene load_steps=5 format=3 uid="uid://c7wkfcwegnan7"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/Enemy.gd" id="1_3au8y"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://Assets/SpaceMono-Regular.ttf" id="2_ionsd"]
-[ext_resource type="Texture2D" uid="uid://crg7rje6e1yyl" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute1.png" id="3_chbvc"]
-[ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="3_ucuut"]
-[ext_resource type="Texture2D" uid="uid://cgedcn1b0d6am" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute2.png" id="4_01b70"]
-[ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="4_defgf"]
-[ext_resource type="Texture2D" uid="uid://b4g7cser1k1cs" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute3.png" id="5_70iu5"]
-[ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="5_sjmi1"]
-[ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="6_ln2f2"]
-[ext_resource type="Texture2D" uid="uid://d1rk0jifg8wnn" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute4.png" id="6_ya6ic"]
-[ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="7_3n1te"]
-[ext_resource type="Texture2D" uid="uid://1yn35p6qh28k" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute5.png" id="7_3vpwt"]
-[ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="8_tqt16"]
-[ext_resource type="Texture2D" uid="uid://de1itsjqsshq5" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute6.png" id="8_wd0p2"]
-[ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="9_ma85e"]
-[ext_resource type="Texture2D" uid="uid://suboxapdk4jd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute7.png" id="9_x1het"]
-[ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="10_6tr50"]
-[ext_resource type="Texture2D" uid="uid://cidepo4intrwi" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute8.png" id="10_j4vdl"]
-[ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="11_f2r1h"]
-[ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="12_qy5dy"]
-[ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="13_m7vsf"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2_ionsd")])
@@ -528,82 +509,6 @@ cache/0/21/0/kerning_overrides/21/0 = Vector2(0, 0)
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(28.6667, 52.6667)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gc6qm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_ucuut")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_defgf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_sjmi1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ln2f2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_3n1te")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_tqt16")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ma85e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_6tr50")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_f2r1h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_qy5dy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_m7vsf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_m7vsf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_m7vsf")
-}],
-"loop": true,
-"name": &"death",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_chbvc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_01b70")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_70iu5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ya6ic")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_3vpwt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_wd0p2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_x1het")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_j4vdl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_3au8y")
 
@@ -629,13 +534,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-2.5, -7.5)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("2")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3.8147e-06, -12)
-scale = Vector2(2.77813, 2.67741)
-sprite_frames = SubResource("SpriteFrames_gc6qm")
-animation = &"death"
-autoplay = "default"
 
 [node name="StunnedTimer" type="Timer" parent="."]
 wait_time = 0.2

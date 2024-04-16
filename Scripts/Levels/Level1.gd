@@ -1,9 +1,10 @@
 extends Node2D
 
-#var EnemyLoad = preload("res://Enemy.tscn")
-#var PlayerLoad = preload("res://Player.tscn")
-@export var EnemyScene: PackedScene
-@export var PlayerScene: PackedScene
+@export var SkeletonScene = preload("res://Scenes/Enemies/Skeleton.tscn")
+@export var NecromancerScene = preload("res://Scenes/Enemies/Necromancer.tscn")
+@export var PlayerScene = preload("res://Scenes/Players/Player.tscn")
+#@export var EnemyScene: PackedScene
+#@export var PlayerScene: PackedScene
 
 @onready var enemy_container = $EnemyContainer
 @onready var spawn_container = $SpawnContainer
@@ -22,6 +23,7 @@ var active_enemy: Enemy = null
 var last_enemy: Enemy = null
 var current_letter_index: int = -1
 
+var who_to_spawn: int = 0
 var lastposx: int = 40
 var difficulty: int = 0
 var enemies_killed: int = 0
@@ -40,7 +42,7 @@ func find_new_active_enemy(typed_character: String):
 		var next_character = prompt.substr(0, 1)
 		firstletters.append(next_character)
 		if next_character == typed_character or next_character == typed_character.to_upper() or next_character == typed_character.to_lower():
-			if enemy == last_enemy:
+			if enemy == last_enemy or enemy.is_dead:
 				continue
 			print("found new enemy that starts with %s" % next_character.to_upper())
 			active_enemy = enemy
@@ -98,9 +100,17 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_SpawnTimer_timeout() -> void:
 	spawn_enemy()
 
+func spawn_enemy() -> void:
+	who_to_spawn = randi() % 100
+	if who_to_spawn > 30 + difficulty * 2:
+		spawn_skeleton()
+	elif who_to_spawn < 30 + difficulty * 2:
+		spawn_necromancer()
+	else:
+		spawn_skeleton()
 
-func spawn_enemy():
-	var enemy_instance: Enemy = EnemyScene.instantiate()
+func spawn_skeleton() -> void:
+	var enemy_instance: Enemy = SkeletonScene.instantiate()
 	#var spawns = spawn_container.get_children()
 	#var index = randi() % spawns.size()
 	var pos = global_position
@@ -113,6 +123,22 @@ func spawn_enemy():
 	enemy_instance.global_position = pos
 	enemy_container.add_child(enemy_instance)
 	enemy_instance.set_difficulty(difficulty)
+
+func spawn_necromancer() -> void:
+	var enemy_instance: Enemy = NecromancerScene.instantiate()
+	#var spawns = spawn_container.get_children()
+	#var index = randi() % spawns.size()
+	var pos = global_position
+	if lastposx < 250:
+		pos.x = randi_range(lastposx + 20, 450)
+	else:
+		pos.x = randi_range(40, lastposx - 90)
+	lastposx = pos.x
+	pos.y = 0
+	enemy_instance.global_position = pos
+	enemy_container.add_child(enemy_instance)
+	enemy_instance.set_difficulty(difficulty)
+	enemy_instance.get_params(SkeletonScene, enemy_container, difficulty)
 
 
 func _on_DifficultyTimer_timeout() -> void:

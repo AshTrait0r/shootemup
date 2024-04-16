@@ -7,7 +7,9 @@ class_name Enemy
 @export var green = Color("#639765")
 @export var red = Color("#a65455")
 
-@export_range(0,1000,0.1) var speed: float
+@export_range(0,1000,0.1) var speed: float = 20
+@export var starting_speed: int = 20
+@export var starting_health: int = 4
 @export var health: int
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -26,13 +28,13 @@ var is_dead: bool = false
 func _ready() -> void:
 	if global_position.x < 270:
 		sprite.set_flip_h(true)
-	prompt_text = PromptList.get_prompt()
+	prompt_text = PromptList.get_prompt(starting_health)
 	health = prompt_text.length()
 	prompt.parse_bbcode(set_center_tags(prompt_text))
 	GlobalSignals.connect("difficulty_increased", Callable(self, "handle_difficulty_increased"))
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta: float = 0) -> void:
 	
 	if global_position.x < 270:
 		sprite.set_flip_h(true)
@@ -71,7 +73,7 @@ func set_difficulty(difficulty: int):
 
 func handle_difficulty_increased(new_difficulty: int):
 	#var new_speed = speed + (0.125 * new_difficulty)
-	speed = 20 + (1.25 * new_difficulty)
+	speed = starting_speed + (1.25 * new_difficulty)
 
 
 func get_prompt() -> String:

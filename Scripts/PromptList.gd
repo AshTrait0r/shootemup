@@ -8,6 +8,20 @@ var special_characters: Array = [
 	"?"
 ]
 
+#func filter_includes(base_array: Array, length: int, filter_key: String = "") -> Array:
+	#var filtered_array := []
+#
+	#for base_item in base_array:
+		#var count: int = 0
+		#var search_item: String = base_item
+#
+		#if filter_key:
+			#search_item = base_item[filter_key]
+#
+		#filtered_array.append(base_item)
+#
+	#return filtered_array
+
 func load_dictionary() -> Array:
 
 	var current_language = Global.current_language
@@ -25,22 +39,31 @@ func load_dictionary() -> Array:
 	#file.close()
 	return allwords
 
-func get_prompt() -> String:
+func get_prompt(health: int = 4) -> String:
 	
 	if allwords.is_empty():
 		allwords = load_dictionary()
 	
-	var word_index = randi() % allwords.size()
-	var special_index = randi() % special_characters.size()
-
-	var word = allwords[word_index]
-	if word == "":
-		word = allwords[word_index-1]
+	var limited_length_words: Array
+	
+	for word in allwords:
+		if word.length() == health: 
+			var actual_word = word.substr(0, 1).to_upper() + word.substr(1).to_lower()
+			allwords.shuffle()
+			return actual_word
+			
+	return "Error"
+	#var word_index = randi() % allwords.size()
+	#var special_index = randi() % special_characters.size()
+#
+	#var word:String = allwords[word_index]
+	#if word == "":
+		#word = allwords[word_index-1]
 	#var special_character = special_characters[special_index]
 
-	var actual_word = word.substr(0, 1).to_upper() + word.substr(1).to_lower()
+	#var actual_word = word.substr(0, 1).to_upper() + word.substr(1).to_lower()
 
-	return actual_word
+	#return actual_word
 
 var english_words: String = "Dragon,Magic,Wizard,Elf,Dwarf,Castle,Forest,\
 Fairy,Sorcery,Quest,Ruin,Prophecy,Giant,Mermaid,Animal,Potion,\
