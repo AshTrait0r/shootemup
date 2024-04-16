@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://csdwmp2cwmwkj"
-path="res://.godot/imported/sfx_shieldUp.ogg-96ef0fc146374f1cfaac2e58a82783dc.oggvorbisstr"
+path="res://.godot/imported/sfx_shieldUp.ogg-98f6f16fe7c052ef2a320ddc21a9488a.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/spaceshooter/Bonus/sfx_shieldUp.ogg"
-dest_files=["res://.godot/imported/sfx_shieldUp.ogg-96ef0fc146374f1cfaac2e58a82783dc.oggvorbisstr"]
+source_file="res://Assets/spaceshooter/Bonus/sfx_shieldUp.ogg"
+dest_files=["res://.godot/imported/sfx_shieldUp.ogg-98f6f16fe7c052ef2a320ddc21a9488a.oggvorbisstr"]
 
 [params]
 

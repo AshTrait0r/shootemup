@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://80oh7n6pp6wd"
-path="res://.godot/imported/beam1.png-d26e80dbc790fc19f520065d8367626a.ctex"
+path="res://.godot/imported/beam1.png-83c22c0a903ce3eb883fc335afdb91c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spaceshooter/PNG/Parts/beam1.png"
-dest_files=["res://.godot/imported/beam1.png-d26e80dbc790fc19f520065d8367626a.ctex"]
+source_file="res://Assets/spaceshooter/PNG/Parts/beam1.png"
+dest_files=["res://.godot/imported/beam1.png-83c22c0a903ce3eb883fc335afdb91c8.ctex"]
 
 [params]
 

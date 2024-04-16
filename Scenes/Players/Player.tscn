@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://b08lpxupe4h7c"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_6y56e"]
-[ext_resource type="PackedScene" uid="uid://li82s5diygat" path="res://Scenes/Projectile.tscn" id="2_hrijm"]
-[ext_resource type="Texture2D" uid="uid://eplgsy3aauuh" path="res://assets/Fantasy/Player/Player1.png" id="3_f4m06"]
-[ext_resource type="Texture2D" uid="uid://cwqyxvcbukix1" path="res://assets/Fantasy/Player/Player2.png" id="4_rurcy"]
+[ext_resource type="Script" path="res://Scripts/Players/Player.gd" id="1_8i17j"]
+[ext_resource type="PackedScene" uid="uid://li82s5diygat" path="res://Scenes/Projectiles/Projectile.tscn" id="2_utqwd"]
+[ext_resource type="Texture2D" uid="uid://eplgsy3aauuh" path="res://Assets/Fantasy/Player/Player1.png" id="3_f4m06"]
+[ext_resource type="Texture2D" uid="uid://cwqyxvcbukix1" path="res://Assets/Fantasy/Player/Player2.png" id="4_rurcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tc6n"]
 size = Vector2(307.32, 284.125)
@@ -31,8 +31,8 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_6y56e")
-projectile = ExtResource("2_hrijm")
+script = ExtResource("1_8i17j")
+projectile = ExtResource("2_utqwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, -7)

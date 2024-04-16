@@ -1,7 +1,42 @@
 [gd_scene load_steps=2 format=3 uid="uid://7w6ihfp4n7d0"]
 
-[ext_resource type="AudioStream" uid="uid://do4in66h6lcq4" path="res://assets/Fantasy/Music/Adventure.mp3" id="1_ryqp1"]
+[ext_resource type="AudioStream" uid="uid://do4in66h6lcq4" path="res://Assets/Fantasy/Music/Adventure.mp3" id="1_ryqp1"]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
 stream = ExtResource("1_ryqp1")
+volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
+stream_paused = false
+max_distance = 2000.0
+attenuation = 1.0
+max_polyphony = 1
+panning_strength = 1.0
+bus = &"Master"
+area_mask = 1
+script = null

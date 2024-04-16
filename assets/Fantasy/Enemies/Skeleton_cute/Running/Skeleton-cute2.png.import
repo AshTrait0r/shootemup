@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgedcn1b0d6am"
-path="res://.godot/imported/Skeleton-cute2.png-11d77d02381898db6493d3042193d2a5.ctex"
+path="res://.godot/imported/Skeleton-cute2.png-37df8fd85266d0b01857b5e05f144cde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute2.png"
-dest_files=["res://.godot/imported/Skeleton-cute2.png-11d77d02381898db6493d3042193d2a5.ctex"]
+source_file="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute2.png"
+dest_files=["res://.godot/imported/Skeleton-cute2.png-37df8fd85266d0b01857b5e05f144cde.ctex"]
 
 [params]
 
