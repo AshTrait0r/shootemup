@@ -98,7 +98,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Enemy" instance=ExtResource("1_nq6p6")]
+[node name="Skeleton" instance=ExtResource("1_nq6p6")]
 script = ExtResource("2_8dsi2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
@@ -107,3 +107,13 @@ scale = Vector2(2.77813, 2.67741)
 sprite_frames = SubResource("SpriteFrames_0p2xk")
 animation = &"death"
 autoplay = "default"
+
+[node name="DeathTimer" parent="." index="4"]
+wait_time = 1.0
+
+[node name="SummonedTimer" type="Timer" parent="." index="5"]
+wait_time = 0.8
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="SummonedTimer" to="." method="_on_summoned_timer_timeout"]

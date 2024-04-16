@@ -22,6 +22,7 @@ func spawn_skeletons() -> void:
 	enemy_instance.global_position = pos
 	enemy_container.add_child(enemy_instance)
 	enemy_instance.set_difficulty(difficulty)
+	enemy_instance.get_params(true)
 
 func get_params(NewSkeletonScene, new_enemy_container, new_difficulty):
 	SkeletonScene = NewSkeletonScene
@@ -29,4 +30,6 @@ func get_params(NewSkeletonScene, new_enemy_container, new_difficulty):
 	difficulty = new_difficulty
 
 func _on_summon_timer_timeout():
+	if is_dead:
+		return
 	spawn_skeletons()
