@@ -566,6 +566,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_m7vsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m7vsf")
 }],
 "loop": true,
 "name": &"death",
@@ -633,12 +636,12 @@ scale = Vector2(2.77813, 2.67741)
 sprite_frames = SubResource("SpriteFrames_gc6qm")
 animation = &"death"
 autoplay = "default"
-frame_progress = 0.617272
 
 [node name="StunnedTimer" type="Timer" parent="."]
 wait_time = 0.2
 
 [node name="DeathTimer" type="Timer" parent="."]
+wait_time = 1.2
 one_shot = true
 
 [connection signal="timeout" from="StunnedTimer" to="." method="_on_stunned_timer_timeout"]
