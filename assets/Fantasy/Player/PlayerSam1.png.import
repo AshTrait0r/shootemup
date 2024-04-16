@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxrr5xfva2u51"
-path="res://.godot/imported/PlayerSam1.png-dbefb0ef809471d8fedfdc17bdb6b618.ctex"
+path="res://.godot/imported/PlayerSam1.png-8921cbd53cb7019032916af347e708b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Player/PlayerSam1.png"
-dest_files=["res://.godot/imported/PlayerSam1.png-dbefb0ef809471d8fedfdc17bdb6b618.ctex"]
+source_file="res://assets/Fantasy/Player/PlayerSam1.png"
+dest_files=["res://.godot/imported/PlayerSam1.png-8921cbd53cb7019032916af347e708b0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxqdpl6ckscd"
-path="res://.godot/imported/pill_blue.png-c057663935f64b23445f81434a7d3165.ctex"
+path="res://.godot/imported/pill_blue.png-7ea141ba84c35a27f43dabcb6254c083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Power-ups/pill_blue.png"
-dest_files=["res://.godot/imported/pill_blue.png-c057663935f64b23445f81434a7d3165.ctex"]
+source_file="res://assets/spaceshooter/PNG/Power-ups/pill_blue.png"
+dest_files=["res://.godot/imported/pill_blue.png-7ea141ba84c35a27f43dabcb6254c083.ctex"]
 
 [params]
 

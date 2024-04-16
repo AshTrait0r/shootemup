@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqvu2lcgvqdfp"
-path="res://.godot/imported/Bush1.png-a6c164f8e8e61743bc8cff1166541a4d.ctex"
+path="res://.godot/imported/Bush1.png-e2e2c7e40b4f38e3faf7b4979eb62c16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Environment/Bush1.png"
-dest_files=["res://.godot/imported/Bush1.png-a6c164f8e8e61743bc8cff1166541a4d.ctex"]
+source_file="res://assets/Fantasy/Environment/Bush1.png"
+dest_files=["res://.godot/imported/Bush1.png-e2e2c7e40b4f38e3faf7b4979eb62c16.ctex"]
 
 [params]
 
