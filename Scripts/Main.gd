@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var level1_scene: PackedScene
+@export var level1_scene = preload("res://Scenes/Levels/Level1.tscn")
 @onready var start_screen = $CanvasLayer/StartScreen
 
 func _ready() -> void:
