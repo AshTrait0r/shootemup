@@ -572,7 +572,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -641,7 +641,6 @@ autoplay = "default"
 wait_time = 0.2
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 1.2
 one_shot = true
 
 [connection signal="timeout" from="StunnedTimer" to="." method="_on_stunned_timer_timeout"]

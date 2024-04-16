@@ -13,11 +13,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 
-func shoot(active_enemy = null) -> void:
+func shoot(active_enemy: Enemy = null, letter: String = "") -> void:
 
 	look_at(direction)
 	var inst: Projectile = projectile.instantiate()
 	owner.projectile_container.add_child(inst)
 	inst.direction = active_enemy.global_position
+	inst.letter = letter
 	inst.active_enemy = active_enemy
 	inst.transform = spawn_point.global_transform

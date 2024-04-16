@@ -12,6 +12,7 @@ class_name Enemy
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var prompt: RichTextLabel = $RichTextLabel
+@onready var colission: CollisionShape2D = $CollisionShape2D
 @onready var prompt_text = prompt.text
 
 var player_position
@@ -55,6 +56,7 @@ func get_damage() -> void:
 	health -= 1
 	if health == 0:
 		is_dead = true
+		colission.disabled = true
 		sprite.animation = "death" 
 		death_timer.start()
 		#queue_free()

@@ -52,7 +52,7 @@ func find_new_active_enemy(typed_character: String):
 			active_enemy = enemy
 			last_enemy = enemy
 			player_node.direction = active_enemy.global_position
-			player_node.shoot(active_enemy)
+			player_node.shoot(active_enemy, next_character)
 			current_letter_index = 1
 			active_enemy.set_next_character(current_letter_index)
 			return
@@ -63,9 +63,9 @@ func find_new_active_enemy(typed_character: String):
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		var typed_event = event as InputEventKey
-		var key_typed
-		var current_language = Global.current_language
+		var typed_event: InputEventKey = event
+		var key_typed : String
+		var current_language: String = Global.current_language
 		key_typed = String.chr(typed_event.unicode)
 		#if current_language == "eng":	
 			#key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
@@ -83,7 +83,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if next_character == key_typed or next_character == key_typed.to_lower():
 				print("successfully typed %s" % key_typed)
 				player_node.direction = active_enemy.global_position
-				player_node.shoot(active_enemy)
+				player_node.shoot(active_enemy, next_character)
 				correctlytyped += 1
 				print(correctlytyped)
 				current_letter_index += 1

@@ -3,9 +3,11 @@ extends Area2D
 class_name Projectile
 
 @onready var deletion_timer: Timer = $DeletionTimer
+@onready var text: RichTextLabel = $Node2D/RichTextLabel2
 var direction: Vector2
-var speed: float = 5.0
+var speed: float = 15.0
 var active_enemy: Enemy
+@onready var letter: String
 
 func _ready() -> void:
 	rotate(deg_to_rad(-90))
@@ -14,6 +16,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	
+	text.text = letter
 	position += (direction - position)/speed
 	look_at(direction)
 
