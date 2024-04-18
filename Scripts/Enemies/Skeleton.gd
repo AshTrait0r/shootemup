@@ -1,9 +1,11 @@
 extends Enemy
 
+class_name Skeleton
+
 var is_summoned: bool
 
 func _ready():
-	starting_health = randi_range(3,6)
+	starting_health = randi_range(1,6)
 	super._ready()
 
 func _physics_process(delta: float = 0) -> void:

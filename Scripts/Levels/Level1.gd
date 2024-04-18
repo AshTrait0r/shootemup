@@ -12,6 +12,7 @@ extends Node2D
 @onready var player_node = $Player
 @onready var spawn_timer = $SpawnTimer
 @onready var difficulty_timer = $DifficultyTimer
+@onready var levelprompt: RichTextLabel = $RichTextLabel
 
 @onready var difficulty_value = $CanvasLayer/HBoxContainer2/DifficultyValue
 @onready var killed_value = $CanvasLayer/HBoxContainer/EnemiesKilledValue
@@ -19,9 +20,11 @@ extends Node2D
 @onready var game_over_killed_value = $CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/HBoxContainer2/GameOverKilledValue
 @onready var accuracy_value = $CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/HBoxContainer/AccuracyValue
 
+var used_letters: Array = Global.used_letters
 var active_enemy: Enemy = null
 var last_enemy: Enemy = null
 var current_letter_index: int = -1
+var remaining_text: String = ""
 
 var who_to_spawn: int = 0
 var lastposx: int = 40
@@ -55,7 +58,8 @@ func find_new_active_enemy(typed_character: String):
 		player_node.direction = active_enemy.global_position
 		player_node.shoot(active_enemy)
 		current_letter_index = 1
-		active_enemy.set_next_character(current_letter_index)
+		remaining_text = active_enemy.set_next_character(current_letter_index)
+		levelprompt.parse_bbcode(Prompt_list.set_center_tags(remaining_text))
 		return
 	if typed_character != "" and firstletters.find(typed_character) == -1 and not firstletters.is_empty():
 		print("incorrectly typed %s instead of %s" % [typed_character,firstletters[0]])
@@ -101,7 +105,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				correctlytyped += 1
 				print(correctlytyped)
 				current_letter_index += 1
-				active_enemy.set_next_character(current_letter_index)
+				remaining_text = active_enemy.set_next_character(current_letter_index)
+				levelprompt.parse_bbcode(Prompt_list.set_center_tags(remaining_text))
 				if current_letter_index == prompt.length():
 					print("done")
 					current_letter_index = -1

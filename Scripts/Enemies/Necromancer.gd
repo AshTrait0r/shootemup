@@ -1,5 +1,7 @@
 extends Enemy
 
+class_name Necromancer
+
 @onready var summon_animation_timer: Timer = $SummonAnimationTimer
 var SkeletonScene
 var enemy_container
@@ -7,7 +9,7 @@ var difficulty
 var is_summoning: bool = false
 
 func _ready():
-	starting_health = randi_range(7,11)
+	starting_health = randi_range(7,12)
 	starting_speed = 4
 	super._ready()
 	
