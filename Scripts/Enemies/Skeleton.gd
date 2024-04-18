@@ -6,7 +6,7 @@ func _ready():
 	starting_health = randi_range(3,6)
 	super._ready()
 
-func _physics_process(_delta: float = 0) -> void:
+func _physics_process(delta: float = 0) -> void:
 	if is_summoned:
 		velocity = Vector2.ZERO
 		sprite.play_backwards("death")

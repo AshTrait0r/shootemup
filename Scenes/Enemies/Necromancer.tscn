@@ -1,12 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://0p2ys8r3rjvl"]
+[gd_scene load_steps=24 format=3 uid="uid://0p2ys8r3rjvl"]
 
 [ext_resource type="PackedScene" uid="uid://c7wkfcwegnan7" path="res://Scenes/Enemies/Enemy.tscn" id="1_ptqjn"]
 [ext_resource type="Script" path="res://Scripts/Enemies/Necromancer.gd" id="2_c47vv"]
 [ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="2_ld6ge"]
 [ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="3_22grj"]
+[ext_resource type="Texture2D" uid="uid://dae6f8jbsm7h2" path="res://Assets/Fantasy/Enemies/Skeleton/Skeleton2.png" id="3_ws6c5"]
+[ext_resource type="Texture2D" uid="uid://cduhy1106113g" path="res://Assets/Fantasy/Enemies/Skeleton/Skeleton3.png" id="4_lhmuh"]
 [ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="4_nyyks"]
+[ext_resource type="Texture2D" uid="uid://bitco2a6te1iu" path="res://Assets/Fantasy/Enemies/Skeleton/Skeleton4.png" id="5_lgwu3"]
 [ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="5_w8sox"]
 [ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="6_axwlv"]
+[ext_resource type="Texture2D" uid="uid://cnj55w25v2cj6" path="res://Assets/Fantasy/Enemies/Skeleton/Skeleton5.png" id="6_wb34c"]
 [ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="7_t5fcx"]
 [ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="8_la2q0"]
 [ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="9_mjclm"]
@@ -21,6 +25,23 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gc6qm"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ws6c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lhmuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lgwu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wb34c")
+}],
+"loop": true,
+"name": &"cast",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ld6ge")
@@ -61,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_lipkg")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 10.0
 }, {
@@ -93,10 +114,14 @@ script = ExtResource("2_c47vv")
 position = Vector2(-1, -7)
 scale = Vector2(2.84756, 2.64483)
 sprite_frames = SubResource("SpriteFrames_gc6qm")
+animation = &"cast"
 autoplay = "default"
 
 [node name="SummonTimer" type="Timer" parent="." index="5"]
 wait_time = 5.0
 autostart = true
 
+[node name="SummonAnimationTimer" type="Timer" parent="." index="6"]
+
 [connection signal="timeout" from="SummonTimer" to="." method="_on_summon_timer_timeout"]
+[connection signal="timeout" from="SummonAnimationTimer" to="." method="_on_summon_animation_timer_timeout"]

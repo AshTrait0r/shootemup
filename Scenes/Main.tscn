@@ -53,7 +53,7 @@ theme_override_constants/separation = 50
 [node name="Title" type="Label" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("2")
-text = "Русы против ящеров на клавиатуре"
+text = "Worderer: A Typer's Adventure"
 horizontal_alignment = 1
 
 [node name="ChooseLanguage" type="Label" parent="CanvasLayer/StartScreen/CenterContainer/VBoxContainer"]

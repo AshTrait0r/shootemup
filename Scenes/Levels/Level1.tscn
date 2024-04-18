@@ -103,9 +103,9 @@ theme_override_fonts/font = SubResource("3")
 text = "RESTART"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_left = 448.0
+offset_left = 434.0
 offset_top = 920.0
-offset_right = 533.0
+offset_right = 519.0
 offset_bottom = 945.0
 mouse_filter = 2
 alignment = 2
@@ -169,7 +169,7 @@ position = Vector2(492, -14)
 wait_time = 5.0
 
 [node name="DifficultyTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 10.0
 
 [node name="Player" parent="." instance=ExtResource("4_n54yd")]
 position = Vector2(282, 874)

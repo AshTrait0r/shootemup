@@ -14,6 +14,7 @@ class_name Enemy
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var prompt: RichTextLabel = $RichTextLabel
+@onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var prompt_text = prompt.text
 
 var player_position
@@ -34,7 +35,7 @@ func _ready() -> void:
 	GlobalSignals.connect("difficulty_increased", Callable(self, "handle_difficulty_increased"))
 
 
-func _physics_process(_delta: float = 0) -> void:
+func _physics_process(delta: float = 0) -> void:
 	
 	if global_position.x < 270:
 		sprite.set_flip_h(true)
@@ -56,6 +57,7 @@ func get_damage() -> void:
 	stunned_timer.start()
 	health -= 1
 	if health == 0:
+		collision.set_deferred("disabled",true)
 		is_dead = true
 		sprite.animation = "death" 
 		death_timer.start()
