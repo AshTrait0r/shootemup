@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cagubvlvopcrr"
-path="res://.godot/imported/turretBase_big.png-b9156ff9db79d505bfa1f7f4a43495f0.ctex"
+path="res://.godot/imported/turretBase_big.png-8b3d393d312b769b62cddc2f5bdeec03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Parts/turretBase_big.png"
-dest_files=["res://.godot/imported/turretBase_big.png-b9156ff9db79d505bfa1f7f4a43495f0.ctex"]
+source_file="res://assets/spaceshooter/PNG/Parts/turretBase_big.png"
+dest_files=["res://.godot/imported/turretBase_big.png-8b3d393d312b769b62cddc2f5bdeec03.ctex"]
 
 [params]
 

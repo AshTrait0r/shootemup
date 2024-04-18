@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4kddhk4mjf7b"
-path="res://.godot/imported/playerShip1_damage3.png-9130a27cac0e42ee89e28a75077a2de5.ctex"
+path="res://.godot/imported/playerShip1_damage3.png-086f1a40d61c02f7c778315aea4a7a01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Damage/playerShip1_damage3.png"
-dest_files=["res://.godot/imported/playerShip1_damage3.png-9130a27cac0e42ee89e28a75077a2de5.ctex"]
+source_file="res://assets/spaceshooter/PNG/Damage/playerShip1_damage3.png"
+dest_files=["res://.godot/imported/playerShip1_damage3.png-086f1a40d61c02f7c778315aea4a7a01.ctex"]
 
 [params]
 

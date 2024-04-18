@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmwonf57wpa1w"
-path="res://.godot/imported/engine1.png-0647f80fbedd41b3193d5db0ff0822f4.ctex"
+path="res://.godot/imported/engine1.png-bae8cb58a8e4b8167631321b8886b827.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Parts/engine1.png"
-dest_files=["res://.godot/imported/engine1.png-0647f80fbedd41b3193d5db0ff0822f4.ctex"]
+source_file="res://assets/spaceshooter/PNG/Parts/engine1.png"
+dest_files=["res://.godot/imported/engine1.png-bae8cb58a8e4b8167631321b8886b827.ctex"]
 
 [params]
 
