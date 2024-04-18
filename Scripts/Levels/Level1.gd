@@ -25,51 +25,69 @@ var current_letter_index: int = -1
 
 var who_to_spawn: int = 0
 var lastposx: int = 40
-var difficulty: int = 0
+var difficulty: int = 1
 var enemies_killed: int = 0
 var accuracy: float = 0
 var correctlytyped: float = 0
 var incorrectlytyped: float = 0
 var firstletters: Array
+var current_letter_enemy: Enemy = null
 @onready var spawn_timer_time: int = spawn_timer.wait_time
 
 func _ready() -> void:
 	start_game()
 
 func find_new_active_enemy(typed_character: String):
+	var enemy_y: int = -100
 	for enemy in enemy_container.get_children():
 		var prompt = enemy.get_prompt()
 		var next_character = prompt.substr(0, 1)
 		firstletters.append(next_character)
 		if next_character == typed_character or next_character == typed_character.to_upper() or next_character == typed_character.to_lower():
-			if enemy == last_enemy or enemy.is_dead:
+			if last_enemy == enemy or enemy.is_dead:
 				continue
-			print("found new enemy that starts with %s" % next_character.to_upper())
-			active_enemy = enemy
-			last_enemy = enemy
-			player_node.direction = active_enemy.global_position
-			player_node.shoot(active_enemy)
-			current_letter_index = 1
-			active_enemy.set_next_character(current_letter_index)
-			return
-	if typed_character != "" and firstletters.find(typed_character) == -1:
+			if enemy.global_position.y > enemy_y:
+				print("found new enemy that starts with %s and on %s" % [next_character.to_upper(), enemy.global_position.y])
+				enemy_y = enemy.global_position.y
+				active_enemy = enemy
+				last_enemy = enemy
+	if active_enemy != null:
+		player_node.direction = active_enemy.global_position
+		player_node.shoot(active_enemy)
+		current_letter_index = 1
+		active_enemy.set_next_character(current_letter_index)
+		return
+	if typed_character != "" and firstletters.find(typed_character) == -1 and not firstletters.is_empty():
 		print("incorrectly typed %s instead of %s" % [typed_character,firstletters[0]])
 		incorrectlytyped += 1
 		print(incorrectlytyped)
+			
+			
+	#for enemy in enemy_container.get_children():
+		#var prompt = enemy.get_prompt()
+		#var next_character = prompt.substr(0, 1)
+		#firstletters.append(next_character)
+		#if next_character in [typed_character,typed_character.to_upper(),typed_character.to_lower()]:
+			#if enemy == last_enemy or enemy.is_dead:
+				#continue
+			#print("found new enemy that starts with %s" % next_character.to_upper())
+			#active_enemy = enemy
+			#last_enemy = enemy
+			#player_node.direction = active_enemy.global_position
+			#player_node.shoot(active_enemy)
+			#current_letter_index = 1
+			#active_enemy.set_next_character(current_letter_index)
+			#return
+	#if typed_character != "" and firstletters.find(typed_character) == -1:
+		#print("incorrectly typed %s instead of %s" % [typed_character,firstletters[0]])
+		#incorrectlytyped += 1
+		#print(incorrectlytyped)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
 		var typed_event = event as InputEventKey
 		var key_typed
-		var current_language = Global.current_language
 		key_typed = String.chr(typed_event.unicode)
-		#if current_language == "eng":	
-			#key_typed = PackedByteArray([typed_event.unicode]).get_string_from_utf8()
-			#key_typed = String.chr(typed_event.unicode)
-		#if current_language == "rus":
-			#var string_letter = typed_event.as_text()
-			#print(string_letter)
-			#key_typed = returntypedkey(string_letter)
 			
 		if active_enemy == null:
 			find_new_active_enemy(key_typed)

@@ -15,10 +15,10 @@ func _physics_process(delta: float) -> void:
 		shoot()
 
 func shoot(active_enemy = null) -> void:
-
 	look_at(direction)
 	var inst: Projectile = projectile.instantiate()
 	owner.projectile_container.add_child(inst)
 	inst.direction = active_enemy.global_position
 	inst.active_enemy = active_enemy
 	inst.transform = spawn_point.global_transform
+

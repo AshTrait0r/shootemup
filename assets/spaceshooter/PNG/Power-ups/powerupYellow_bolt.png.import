@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drq4hvpqj1g56"
-path="res://.godot/imported/powerupYellow_bolt.png-d002ead82b572f486635a4515befcba6.ctex"
+path="res://.godot/imported/powerupYellow_bolt.png-f6a10d44180183b2d022f73e8bd8247a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spaceshooter/PNG/Power-ups/powerupYellow_bolt.png"
-dest_files=["res://.godot/imported/powerupYellow_bolt.png-d002ead82b572f486635a4515befcba6.ctex"]
+source_file="res://Assets/spaceshooter/PNG/Power-ups/powerupYellow_bolt.png"
+dest_files=["res://.godot/imported/powerupYellow_bolt.png-f6a10d44180183b2d022f73e8bd8247a.ctex"]
 
 [params]
 

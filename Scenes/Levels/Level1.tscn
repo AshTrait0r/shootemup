@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dtwm5gj2hvijf"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Level1.gd" id="1_4elqj"]
-[ext_resource type="Texture2D" uid="uid://b4g18jrqxbjuu" path="res://assets/Fantasy/Background/Grass field.png" id="2_pgfqp"]
-[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="3_7chxd"]
+[ext_resource type="Texture2D" uid="uid://b4g18jrqxbjuu" path="res://Assets/Fantasy/Background/Grass field.png" id="2_pgfqp"]
+[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://Assets/SpaceMono-Regular.ttf" id="3_7chxd"]
 [ext_resource type="PackedScene" uid="uid://b08lpxupe4h7c" path="res://Scenes/Players/Player.tscn" id="4_n54yd"]
 
 [sub_resource type="FontFile" id="2"]

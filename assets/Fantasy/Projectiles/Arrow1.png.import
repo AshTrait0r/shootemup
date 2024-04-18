@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcunipbebhx1b"
-path="res://.godot/imported/Arrow1.png-4ff76fded602a7fb11c62c90630e8611.ctex"
+path="res://.godot/imported/Arrow1.png-3046cf5e358be259561eb15d87cd7ca1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fantasy/Projectiles/Arrow1.png"
-dest_files=["res://.godot/imported/Arrow1.png-4ff76fded602a7fb11c62c90630e8611.ctex"]
+source_file="res://Assets/Fantasy/Projectiles/Arrow1.png"
+dest_files=["res://.godot/imported/Arrow1.png-3046cf5e358be259561eb15d87cd7ca1.ctex"]
 
 [params]
 

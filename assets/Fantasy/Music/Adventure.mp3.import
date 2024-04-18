@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://do4in66h6lcq4"
-path="res://.godot/imported/Adventure.mp3-09106950d1b077390057ea93b472eeea.mp3str"
+path="res://.godot/imported/Adventure.mp3-b75fbe6f1842e89889dcb55e632c74bd.mp3str"
 
 [deps]
 
-source_file="res://assets/Fantasy/Music/Adventure.mp3"
-dest_files=["res://.godot/imported/Adventure.mp3-09106950d1b077390057ea93b472eeea.mp3str"]
+source_file="res://Assets/Fantasy/Music/Adventure.mp3"
+dest_files=["res://.godot/imported/Adventure.mp3-b75fbe6f1842e89889dcb55e632c74bd.mp3str"]
 
 [params]
 
