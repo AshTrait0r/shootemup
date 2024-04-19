@@ -12,6 +12,7 @@ extends Node2D
 @onready var projectile_container = $ProjectileContainer
 @onready var player_node = $Player
 @onready var spawn_timer = $SpawnTimer
+@onready var speed_timer = $SpeedTimer
 @onready var difficulty_timer = $DifficultyTimer
 @onready var levelprompt: RichTextLabel = $RichTextLabel
 
@@ -64,7 +65,7 @@ func find_new_active_enemy(typed_character: String):
 		remaining_text = active_enemy.set_next_character(current_letter_index)
 		levelprompt.parse_bbcode(Prompt_list.set_center_tags(remaining_text))
 		if remaining_text == "":
-			active_enemy = null
+			enemy_killed()
 		return
 	if typed_character != "" and firstletters.find(typed_character) == -1 and not firstletters.is_empty():
 		print("incorrectly typed %s instead of %s" % [typed_character,firstletters[0]])
@@ -113,19 +114,21 @@ func _unhandled_input(event: InputEvent) -> void:
 				remaining_text = active_enemy.set_next_character(current_letter_index)
 				levelprompt.parse_bbcode(Prompt_list.set_center_tags(remaining_text))
 				if current_letter_index == prompt.length():
-					print("done")
-					current_letter_index = -1
-					active_enemy = null
-					enemies_killed += 1
-					killed_value.text = str(enemies_killed)
-					if enemy_container.get_child_count() < 3:
-						print("spawned enemy")
-						spawn_enemy()
+					enemy_killed()
 			else:
 				print("incorrectly typed %s instead of %s" % [key_typed, next_character])
 				incorrectlytyped += 1
 				print(incorrectlytyped)
 
+func enemy_killed():
+	print("done")
+	current_letter_index = -1
+	active_enemy = null
+	enemies_killed += 1
+	killed_value.text = str(enemies_killed)
+	if enemy_container.get_child_count() < 3:
+		spawn_enemy()
+	
 func _on_SpawnTimer_timeout() -> void:
 	spawn_enemy()
 
@@ -220,6 +223,7 @@ func game_over():
 	game_over_screen.show()
 	spawn_timer.wait_time = spawn_timer_time
 	spawn_timer.stop()
+	used_letters.clear()
 	difficulty_timer.stop()
 	active_enemy = null
 	current_letter_index = -1
@@ -240,6 +244,7 @@ func start_game():
 	randomize()
 	spawn_timer.start()
 	difficulty_timer.start()
+	speed_timer.start()
 	spawn_enemy()
 
 

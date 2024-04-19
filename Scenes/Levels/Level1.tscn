@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4g18jrqxbjuu" path="res://Assets/Fantasy/Background/Grass field.png" id="2_pgfqp"]
 [ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://Assets/SpaceMono-Regular.ttf" id="3_7chxd"]
 [ext_resource type="PackedScene" uid="uid://b08lpxupe4h7c" path="res://Scenes/Players/Player.tscn" id="4_n54yd"]
-[ext_resource type="PackedScene" uid="uid://n6s5uus8u0dy" path="res://Scenes/pause_controller.tscn" id="5_7eynd"]
+[ext_resource type="PackedScene" uid="uid://n6s5uus8u0dy" path="res://Scenes/pause_controller.tscn" id="5_7qcvm"]
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("3_7chxd")])
@@ -698,9 +698,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpeedTimer" type="Timer" parent="."]
 wait_time = 60.0
-autostart = true
 
-[node name="PauseController" parent="." instance=ExtResource("5_7eynd")]
+[node name="PauseController" parent="." instance=ExtResource("5_7qcvm")]
 
 [connection signal="pressed" from="CanvasLayer/GameOverScreen/CenterContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="body_entered" from="LoseArea" to="." method="_on_LoseArea_body_entered"]
