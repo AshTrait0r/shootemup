@@ -34,6 +34,7 @@ var difficulty: int = 1
 var enemies_killed: int = 0
 var accuracy: float = 0
 var correctlytyped: float = 0
+var correctlytypedinminute: float = 0
 var incorrectlytyped: float = 0
 var firstletters: Array
 var current_letter_enemy: Enemy = null
@@ -117,7 +118,8 @@ func _unhandled_input(event: InputEvent) -> void:
 					active_enemy = null
 					enemies_killed += 1
 					killed_value.text = str(enemies_killed)
-					if enemy_container.get_child_count() < 4:
+					if enemy_container.get_child_count() < 3:
+						print("spawned enemy")
 						spawn_enemy()
 			else:
 				print("incorrectly typed %s instead of %s" % [key_typed, next_character])
@@ -252,3 +254,7 @@ func _on_ChooseEnglish_pressed() -> void:
 	Global.current_language = "eng"
 	start_game()
 
+func _on_speed_timer_timeout():
+	correctlytypedinminute = correctlytyped - correctlytypedinminute
+	print(correctlytypedinminute)
+	#get_tree().set_deferred("paused",true)
