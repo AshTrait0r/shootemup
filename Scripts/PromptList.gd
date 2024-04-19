@@ -80,7 +80,8 @@ func get_prompt(health: int = 4) -> String:
 static func set_center_tags(string_to_center: String):
 	return "[center]" + string_to_center + "[/center]"
 
-var english_words: String = "Dragon,Magic,Wizard,Elf,Dwarf,Castle,Forest,\
+var english_words: String = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,\
+Dragon,Magic,Wizard,Elf,Dwarf,Castle,Forest,Ad,Go,Re,Mi,Fa,He,Us,We,Ox,Up,Ok,No,Yes,It\
 Fairy,Sorcery,Quest,Ruin,Prophecy,Giant,Mermaid,Animal,Potion,\
 Spell,Dungeon,Artifact,Ghost,Element,Shapeshifter,Carpet,Portal,\
 Clan,Time,Celestial,Temple,Curse,Creature,Divine,Alchemy,Tome,\
@@ -92,7 +93,7 @@ Battle,Lake,Caravan,Timekeeper,Oath,Golem,Sigil,Crystal,Coven,Masquerade,\
 Convergence,Cycle,Familiar,Garden,City,Stargazer,Balance,Mirror,Court,Harmony,Realm,Wind,Peace"
 
 var russian_words: String = "А,Б,В,Г,Д,Е,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я,\
-Эльф,Орк,Гном,Фея,Меч,Демон,Король,Принц,Замок,Чудо,\
+Да,Йод,Ад,Эльф,Орк,Гном,Фея,Меч,Демон,Король,Принц,Замок,Чудо,\
 Закон,Тролль,Герой,Подарок,Зелье,Персонаж,Загадка,Сокровище,\
 Портал,Миф,Проклятие,Путешествие,Эпос,Призрак,Легенда,Эпик,Существо,\
 Кристалл,Колдун,Магия,Воин,Квест,Фантазия,Приключение,Чудовище,\

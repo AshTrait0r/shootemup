@@ -1,11 +1,12 @@
 extends Enemy
 
-class_name Skeleton
+class_name Necrodog
 
 var is_summoned: bool
 
 func _ready():
-	starting_health = randi_range(3,6)
+	starting_health = randi_range(1,2)
+	starting_speed = 40
 	super._ready()
 
 func _physics_process(delta: float = 0) -> void:
