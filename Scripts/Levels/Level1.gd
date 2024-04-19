@@ -60,6 +60,8 @@ func find_new_active_enemy(typed_character: String):
 		current_letter_index = 1
 		remaining_text = active_enemy.set_next_character(current_letter_index)
 		levelprompt.parse_bbcode(Prompt_list.set_center_tags(remaining_text))
+		if remaining_text == "":
+			active_enemy = null
 		return
 	if typed_character != "" and firstletters.find(typed_character) == -1 and not firstletters.is_empty():
 		print("incorrectly typed %s instead of %s" % [typed_character,firstletters[0]])

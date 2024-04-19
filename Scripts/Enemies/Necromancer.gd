@@ -27,7 +27,7 @@ func spawn_skeletons() -> void:
 	#var spawns = spawn_container.get_children()
 	#var index = randi() % spawns.size()
 	var pos = global_position
-	pos.x = randi_range(position.x - 20, position.x + 20)
+	pos.x = randi_range(position.x - 20.0, position.x + 20.0)
 	pos.y = position.y + 40
 	enemy_instance.global_position = pos
 	enemy_container.add_child(enemy_instance)
