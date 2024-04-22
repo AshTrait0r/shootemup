@@ -2,25 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://c7wkfcwegnan7" path="res://Scenes/Enemies/Enemy.tscn" id="1_nq6p6"]
 [ext_resource type="Script" path="res://Scripts/Enemies/Skeleton.gd" id="2_8dsi2"]
-[ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="2_56oec"]
-[ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="3_xmciv"]
-[ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="4_28l2d"]
-[ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="5_i84un"]
-[ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="6_vf78x"]
-[ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="7_gpoks"]
-[ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="8_5sptp"]
-[ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="9_hk7ug"]
-[ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="10_h6byc"]
-[ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="11_3hii5"]
-[ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="12_x88nx"]
-[ext_resource type="Texture2D" uid="uid://crg7rje6e1yyl" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute1.png" id="13_t7ues"]
-[ext_resource type="Texture2D" uid="uid://cgedcn1b0d6am" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute2.png" id="14_gr14d"]
-[ext_resource type="Texture2D" uid="uid://b4g7cser1k1cs" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute3.png" id="15_p5alj"]
-[ext_resource type="Texture2D" uid="uid://d1rk0jifg8wnn" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute4.png" id="16_31eb3"]
-[ext_resource type="Texture2D" uid="uid://1yn35p6qh28k" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute5.png" id="17_1tvyb"]
-[ext_resource type="Texture2D" uid="uid://de1itsjqsshq5" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute6.png" id="18_mpd3h"]
-[ext_resource type="Texture2D" uid="uid://suboxapdk4jd" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute7.png" id="19_ufwcs"]
-[ext_resource type="Texture2D" uid="uid://cidepo4intrwi" path="res://assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute8.png" id="20_3h4cb"]
+[ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="2_56oec"]
+[ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="3_xmciv"]
+[ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="4_28l2d"]
+[ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="5_i84un"]
+[ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="6_vf78x"]
+[ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="7_gpoks"]
+[ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="8_5sptp"]
+[ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="9_hk7ug"]
+[ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="10_h6byc"]
+[ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="11_3hii5"]
+[ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="12_x88nx"]
+[ext_resource type="Texture2D" uid="uid://crg7rje6e1yyl" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute1.png" id="13_t7ues"]
+[ext_resource type="Texture2D" uid="uid://cgedcn1b0d6am" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute2.png" id="14_gr14d"]
+[ext_resource type="Texture2D" uid="uid://b4g7cser1k1cs" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute3.png" id="15_p5alj"]
+[ext_resource type="Texture2D" uid="uid://d1rk0jifg8wnn" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute4.png" id="16_31eb3"]
+[ext_resource type="Texture2D" uid="uid://1yn35p6qh28k" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute5.png" id="17_1tvyb"]
+[ext_resource type="Texture2D" uid="uid://de1itsjqsshq5" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute6.png" id="18_mpd3h"]
+[ext_resource type="Texture2D" uid="uid://suboxapdk4jd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute7.png" id="19_ufwcs"]
+[ext_resource type="Texture2D" uid="uid://cidepo4intrwi" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Running/Skeleton-cute8.png" id="20_3h4cb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0p2xk"]
 animations = [{
@@ -99,6 +99,7 @@ animations = [{
 script = ExtResource("2_8dsi2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
+visibility_layer = 2
 position = Vector2(3.8147e-06, -12)
 scale = Vector2(2.77813, 2.67741)
 sprite_frames = SubResource("SpriteFrames_0p2xk")

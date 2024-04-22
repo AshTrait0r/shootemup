@@ -222,6 +222,7 @@ func game_over():
 	accuracy_value.text = str(snapped(accuracy,0.001))
 	game_over_screen.show()
 	spawn_timer.wait_time = spawn_timer_time
+	levelprompt.text = ""
 	spawn_timer.stop()
 	used_letters.clear()
 	difficulty_timer.stop()

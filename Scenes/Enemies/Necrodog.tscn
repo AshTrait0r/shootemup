@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bpw0rfh378nav"]
+[gd_scene load_steps=23 format=3 uid="uid://bpw0rfh378nav"]
 
 [ext_resource type="PackedScene" uid="uid://c7wkfcwegnan7" path="res://Scenes/Enemies/Enemy.tscn" id="1_iqtgt"]
 [ext_resource type="Script" path="res://Scripts/Enemies/Necrodog.gd" id="2_nambg"]
@@ -13,10 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="11_2rjv5"]
 [ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="12_5hgj5"]
 [ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="13_kjand"]
-[ext_resource type="Texture2D" uid="uid://lqjpgjdfdqw3" path="res://Assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer1.png" id="14_6rrh4"]
-[ext_resource type="Texture2D" uid="uid://ddn22l8ijg2xg" path="res://Assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer2.png" id="15_stfq3"]
-[ext_resource type="Texture2D" uid="uid://dw2thipt78sn8" path="res://Assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer3.png" id="16_6o1i2"]
-[ext_resource type="Texture2D" uid="uid://cnt65eduwmtpu" path="res://Assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer4.png" id="17_b83qr"]
+[ext_resource type="Texture2D" uid="uid://haryd4fbevyo" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered1.png" id="14_cm41n"]
+[ext_resource type="Texture2D" uid="uid://pch8iqtugd3v" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered2.png" id="15_o2m7l"]
+[ext_resource type="Texture2D" uid="uid://cdsep4x8w8nh3" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered3.png" id="16_vumy4"]
+[ext_resource type="Texture2D" uid="uid://boh2ukfgqynnh" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered4.png" id="17_sp3m2"]
+[ext_resource type="Texture2D" uid="uid://d1dfi6le2texy" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered5.png" id="18_c0ppo"]
+[ext_resource type="Texture2D" uid="uid://dy4aunaayj8hu" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered6.png" id="19_fhl46"]
+[ext_resource type="Texture2D" uid="uid://cba1usyylwec" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered7.png" id="20_kpbld"]
+[ext_resource type="Texture2D" uid="uid://b8k4y4b2i88wd" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered8.png" id="21_xmyng"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0p2xk"]
 animations = [{
@@ -63,16 +67,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_6rrh4")
+"texture": ExtResource("14_cm41n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_stfq3")
+"texture": ExtResource("15_o2m7l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_6o1i2")
+"texture": ExtResource("16_vumy4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_b83qr")
+"texture": ExtResource("17_sp3m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_c0ppo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_fhl46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kpbld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xmyng")
 }],
 "loop": true,
 "name": &"default",
@@ -83,10 +99,13 @@ animations = [{
 script = ExtResource("2_nambg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
-position = Vector2(-2.00002, 5.99997)
-scale = Vector2(0.420315, 0.405077)
+visibility_layer = 2
+position = Vector2(-1.18125, -10.2109)
+scale = Vector2(2.76133, 2.66122)
 sprite_frames = SubResource("SpriteFrames_0p2xk")
 autoplay = "default"
+frame = 1
+frame_progress = 0.831855
 
 [node name="DeathTimer" parent="." index="4"]
 wait_time = 1.0
