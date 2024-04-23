@@ -19,10 +19,12 @@ func _physics_process(delta: float = 0) -> void:
 		return
 	super._physics_process()
 
-func spawn_skeletons() -> void:
+func start_spawning() -> void:
 	is_summoning = true
 	summon_animation_timer.start()
 	sprite.play("cast")
+
+func spawn_skeletons() -> void:
 	var enemy_instance: Enemy = SkeletonScene.instantiate()
 	#var spawns = spawn_container.get_children()
 	#var index = randi() % spawns.size()
@@ -42,9 +44,10 @@ func get_params(NewSkeletonScene, new_enemy_container, new_difficulty):
 func _on_summon_timer_timeout():
 	if is_dead:
 		return
-	spawn_skeletons()
-
+	start_spawning()
 
 func _on_summon_animation_timer_timeout():
+	spawn_skeletons()
 	is_summoning = false
 	sprite.play("default")
+	summon_animation_timer.stop()

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnt65eduwmtpu"
-path="res://.godot/imported/Necromancer4.png-ce9e6e6525486aee81e09cdd5c7d76f6.ctex"
+path="res://.godot/imported/Necromancer4.png-db5c6c811702e26221e3077791bfde79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer4.png"
-dest_files=["res://.godot/imported/Necromancer4.png-ce9e6e6525486aee81e09cdd5c7d76f6.ctex"]
+source_file="res://Assets/Fantasy/Enemies/Necromancer/Necromancer old/Necromancer4.png"
+dest_files=["res://.godot/imported/Necromancer4.png-db5c6c811702e26221e3077791bfde79.ctex"]
 
 [params]
 
