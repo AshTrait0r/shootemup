@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdsep4x8w8nh3"
-path="res://.godot/imported/dog-Recovered3.png-ba7eab19efdf8cce847c50410ffdd206.ctex"
+path="res://.godot/imported/dog-Recovered3.png-b6aa883cfa5ee55716c9ab6907878d7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered3.png"
-dest_files=["res://.godot/imported/dog-Recovered3.png-ba7eab19efdf8cce847c50410ffdd206.ctex"]
+source_file="res://assets/Fantasy/Enemies/Dogs/dog-Recovered3.png"
+dest_files=["res://.godot/imported/dog-Recovered3.png-b6aa883cfa5ee55716c9ab6907878d7c.ctex"]
 
 [params]
 

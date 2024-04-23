@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qbbo048orabn"
-path="res://.godot/imported/shield_gold.png-a0a18fe07ec5d18bc01d315b5807b76c.ctex"
+path="res://.godot/imported/shield_gold.png-382b0ecddddc4931a1a5f09be8b0b40f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Power-ups/shield_gold.png"
-dest_files=["res://.godot/imported/shield_gold.png-a0a18fe07ec5d18bc01d315b5807b76c.ctex"]
+source_file="res://assets/spaceshooter/PNG/Power-ups/shield_gold.png"
+dest_files=["res://.godot/imported/shield_gold.png-382b0ecddddc4931a1a5f09be8b0b40f.ctex"]
 
 [params]
 

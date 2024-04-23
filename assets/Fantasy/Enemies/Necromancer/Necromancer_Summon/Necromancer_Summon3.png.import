@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgwlr56qodsn3"
-path="res://.godot/imported/Necromancer_Summon3.png-7f24ae5013f59b6578f8e80c11202de1.ctex"
+path="res://.godot/imported/Necromancer_Summon3.png-c5fd52b981d3ce51189d2d37d2055786.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Enemies/Necromancer/Necromancer_Summon/Necromancer_Summon3.png"
-dest_files=["res://.godot/imported/Necromancer_Summon3.png-7f24ae5013f59b6578f8e80c11202de1.ctex"]
+source_file="res://assets/Fantasy/Enemies/Necromancer/Necromancer_Summon/Necromancer_Summon3.png"
+dest_files=["res://.godot/imported/Necromancer_Summon3.png-c5fd52b981d3ce51189d2d37d2055786.ctex"]
 
 [params]
 

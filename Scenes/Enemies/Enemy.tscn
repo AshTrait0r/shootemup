@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7wkfcwegnan7"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/Enemy.gd" id="1_3au8y"]
-[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://Assets/SpaceMono-Regular.ttf" id="2_ionsd"]
+[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="2_ionsd"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2_ionsd")])
