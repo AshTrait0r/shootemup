@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dtwm5gj2hvijf"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_tgcph"]
-[ext_resource type="Texture2D" uid="uid://b4g18jrqxbjuu" path="res://Assets/Fantasy/Background/Grass field.png" id="2_pgfqp"]
-[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://Assets/SpaceMono-Regular.ttf" id="3_7chxd"]
+[ext_resource type="Texture2D" uid="uid://b4g18jrqxbjuu" path="res://assets/Fantasy/Background/Grass field.png" id="2_pgfqp"]
+[ext_resource type="FontFile" uid="uid://ycaiqwy2b78f" path="res://assets/SpaceMono-Regular.ttf" id="3_7chxd"]
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("3_7chxd")])

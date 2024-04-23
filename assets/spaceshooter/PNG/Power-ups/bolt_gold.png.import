@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnd74p8wrh5bq"
-path="res://.godot/imported/bolt_gold.png-7fa452c75f781005a31bb0e1df5e8d4a.ctex"
+path="res://.godot/imported/bolt_gold.png-e24cbf3aa8b7951ce2e08a7a6da90d7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Power-ups/bolt_gold.png"
-dest_files=["res://.godot/imported/bolt_gold.png-7fa452c75f781005a31bb0e1df5e8d4a.ctex"]
+source_file="res://assets/spaceshooter/PNG/Power-ups/bolt_gold.png"
+dest_files=["res://.godot/imported/bolt_gold.png-e24cbf3aa8b7951ce2e08a7a6da90d7d.ctex"]
 
 [params]
 
