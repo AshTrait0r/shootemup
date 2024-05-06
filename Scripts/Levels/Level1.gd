@@ -3,6 +3,7 @@ extends Node2D
 @export var SkeletonScene = preload("res://Scenes/Enemies/Skeleton.tscn")
 @export var NecromancerScene = preload("res://Scenes/Enemies/Necromancer.tscn")
 @export var NecrodogScene = preload("res://Scenes/Enemies/Necrodog.tscn")
+@export var ZombieScene = preload("res://Scenes/Enemies/Zombie.tscn")
 @export var PlayerScene = preload("res://Scenes/Players/Player.tscn")
 #@export var EnemyScene: PackedScene
 #@export var PlayerScene: PackedScene
@@ -136,9 +137,11 @@ func spawn_enemy() -> void:
 	if not current_necromants.is_empty() and current_necromants[0] == null:
 		current_necromants.erase(current_necromants[0])
 	who_to_spawn = randi() % 100
-	if who_to_spawn < 40 - difficulty:
+	if who_to_spawn < 25 - difficulty:
 		spawn_necrodog()
-	elif who_to_spawn > 40 - difficulty and who_to_spawn < 75 - difficulty:
+	elif who_to_spawn > 25 - difficulty and who_to_spawn < 60 - difficulty:
+		spawn_zombie()
+	elif who_to_spawn > 60 - difficulty and who_to_spawn < 75 - difficulty:
 		spawn_skeleton()
 	elif who_to_spawn > 75 - difficulty and current_necromants.size() < 3:
 		spawn_necromancer()
@@ -147,14 +150,7 @@ func spawn_enemy() -> void:
 
 func spawn_necrodog() -> void:
 	var enemy_instance: Enemy = NecrodogScene.instantiate()
-	#var spawns = spawn_container.get_children()
-	#var index = randi() % spawns.size()
 	var pos = global_position
-	#if lastposx < 250:
-		#pos.x = randi_range(lastposx + 20, 450)
-	#else:
-		#pos.x = randi_range(40, lastposx - 90)
-	#lastposx = pos.x
 	pos.x = 270
 	pos.y = -20
 	enemy_instance.global_position = pos
@@ -163,8 +159,6 @@ func spawn_necrodog() -> void:
 
 func spawn_skeleton() -> void:
 	var enemy_instance: Enemy = SkeletonScene.instantiate()
-	#var spawns = spawn_container.get_children()
-	#var index = randi() % spawns.size()
 	var pos = global_position
 	if lastposx < 250:
 		pos.x = randi_range(lastposx + 20, 450)
@@ -176,10 +170,21 @@ func spawn_skeleton() -> void:
 	enemy_container.add_child(enemy_instance)
 	enemy_instance.set_difficulty(difficulty)
 
+func spawn_zombie() -> void:
+	var enemy_instance: Enemy = ZombieScene.instantiate()
+	var pos = global_position
+	if lastposx < 250:
+		pos.x = randi_range(lastposx + 20, 450)
+	else:
+		pos.x = randi_range(40, lastposx - 90)
+	lastposx = pos.x
+	pos.y = 300
+	enemy_instance.global_position = pos
+	enemy_container.add_child(enemy_instance)
+	enemy_instance.set_difficulty(difficulty)
+
 func spawn_necromancer() -> void:
 	var enemy_instance: Enemy = NecromancerScene.instantiate()
-	#var spawns = spawn_container.get_children()
-	#var index = randi() % spawns.size()
 	var pos = global_position
 	if lastposx < 250:
 		pos.x = randi_range(lastposx + 20, 450)

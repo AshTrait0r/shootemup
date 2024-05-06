@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ycaiqwy2b78f"
-path="res://.godot/imported/SpaceMono-Regular.ttf-a0e59f506ad76f27d9c5d7797291715d.fontdata"
+path="res://.godot/imported/SpaceMono-Regular.ttf-7072cc4c9473142f0b0beff48134e0ec.fontdata"
 
 [deps]
 
-source_file="res://assets/SpaceMono-Regular.ttf"
-dest_files=["res://.godot/imported/SpaceMono-Regular.ttf-a0e59f506ad76f27d9c5d7797291715d.fontdata"]
+source_file="res://Assets/SpaceMono-Regular.ttf"
+dest_files=["res://.godot/imported/SpaceMono-Regular.ttf-7072cc4c9473142f0b0beff48134e0ec.fontdata"]
 
 [params]
 

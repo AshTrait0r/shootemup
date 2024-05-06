@@ -47,6 +47,8 @@ func _on_summon_timer_timeout():
 	start_spawning()
 
 func _on_summon_animation_timer_timeout():
+	if is_dead:
+		return
 	spawn_skeletons()
 	is_summoning = false
 	sprite.play("default")

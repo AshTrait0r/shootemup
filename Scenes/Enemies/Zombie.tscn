@@ -1,0 +1,85 @@
+[gd_scene load_steps=16 format=3 uid="uid://csh31xwiu8qtt"]
+
+[ext_resource type="PackedScene" uid="uid://c7wkfcwegnan7" path="res://Scenes/Enemies/Enemy.tscn" id="1_76j75"]
+[ext_resource type="Script" path="res://Scripts/Enemies/Zombie.gd" id="2_gchk2"]
+[ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="2_x3kcj"]
+[ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="3_nn71v"]
+[ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="4_perxx"]
+[ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="5_i4lbx"]
+[ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="6_5v20s"]
+[ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="7_r7va3"]
+[ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="8_40xcy"]
+[ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="9_mjvh6"]
+[ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="10_mdo8h"]
+[ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="11_0yavr"]
+[ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="12_jy151"]
+[ext_resource type="Texture2D" uid="uid://bvivnqxwb6830" path="res://Assets/spaceshooter/PNG/Enemies/enemyBlack1.png" id="13_m451m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y751c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x3kcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nn71v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_perxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i4lbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5v20s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r7va3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_40xcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mjvh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mdo8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0yavr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jy151")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jy151")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_m451m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Zombie" instance=ExtResource("1_76j75")]
+script = ExtResource("2_gchk2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="4"]
+visibility_layer = 2
+position = Vector2(3.8147e-06, -12)
+scale = Vector2(2.77813, 2.67741)
+sprite_frames = SubResource("SpriteFrames_y751c")
+autoplay = "default"
+frame_progress = 0.215684
+
+[node name="SummonedTimer" type="Timer" parent="." index="5"]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="SummonedTimer" to="." method="_on_summoned_timer_timeout"]

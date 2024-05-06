@@ -1,12 +1,12 @@
 extends Enemy
 
-class_name Skeleton
+class_name Zombie
 
-var is_summoned: bool
+var is_summoned: bool = true
 
 func _ready():
-	starting_health = randi_range(3,4)
-	starting_speed = 20
+	starting_health = randi_range(5,6)
+	starting_speed = 15
 	super._ready()
 
 func _physics_process(delta: float = 0) -> void:
