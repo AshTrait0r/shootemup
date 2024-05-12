@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cji735b0bh7k0"
-path="res://.godot/imported/Necromancer_Death9.png-59262f6e9af6e21e231d6d0632284b38.ctex"
+path="res://.godot/imported/Necromancer_Death9.png-56a557257ced5440f574ecb04e4b52f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Enemies/Necromancer/Necromancer_Death/Necromancer_Death9.png"
-dest_files=["res://.godot/imported/Necromancer_Death9.png-59262f6e9af6e21e231d6d0632284b38.ctex"]
+source_file="res://assets/Fantasy/Enemies/Necromancer/Necromancer_Death/Necromancer_Death9.png"
+dest_files=["res://.godot/imported/Necromancer_Death9.png-56a557257ced5440f574ecb04e4b52f8.ctex"]
 
 [params]
 

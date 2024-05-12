@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj0po10fm6vt4"
-path="res://.godot/imported/Tower2.png-fead4aa6f1bb7f87e99b81368870f99e.ctex"
+path="res://.godot/imported/Tower2.png-758fceeaeb844594da276cd2d7399729.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Player/Tower1/Tower2.png"
-dest_files=["res://.godot/imported/Tower2.png-fead4aa6f1bb7f87e99b81368870f99e.ctex"]
+source_file="res://assets/Fantasy/Player/Tower1/Tower2.png"
+dest_files=["res://.godot/imported/Tower2.png-758fceeaeb844594da276cd2d7399729.ctex"]
 
 [params]
 

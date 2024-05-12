@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpic6etxb5nrs"
-path="res://.godot/imported/meteorBrown_big1.png-d754e63ec2c977add9acaa9b3ca4ae01.ctex"
+path="res://.godot/imported/meteorBrown_big1.png-3a3af9e15a0b3e054859fe4bf841edda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Meteors/meteorBrown_big1.png"
-dest_files=["res://.godot/imported/meteorBrown_big1.png-d754e63ec2c977add9acaa9b3ca4ae01.ctex"]
+source_file="res://assets/spaceshooter/PNG/Meteors/meteorBrown_big1.png"
+dest_files=["res://.godot/imported/meteorBrown_big1.png-3a3af9e15a0b3e054859fe4bf841edda.ctex"]
 
 [params]
 

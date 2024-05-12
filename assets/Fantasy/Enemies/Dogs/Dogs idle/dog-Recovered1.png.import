@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boh2ukfgqynnh"
-path="res://.godot/imported/dog-Recovered4.png-b780224891b8da8a838fca46c36d3204.ctex"
+uid="uid://haryd4fbevyo"
+path="res://.godot/imported/dog-Recovered1.png-87e17ee17aa239b0d28ffd52754f927e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered4.png"
-dest_files=["res://.godot/imported/dog-Recovered4.png-b780224891b8da8a838fca46c36d3204.ctex"]
+source_file="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered1.png"
+dest_files=["res://.godot/imported/dog-Recovered1.png-87e17ee17aa239b0d28ffd52754f927e.ctex"]
 
 [params]
 

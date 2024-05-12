@@ -1,65 +1,42 @@
-[gd_scene load_steps=23 format=3 uid="uid://bpw0rfh378nav"]
+[gd_scene load_steps=18 format=3 uid="uid://bpw0rfh378nav"]
 
 [ext_resource type="PackedScene" uid="uid://c7wkfcwegnan7" path="res://Scenes/Enemies/Enemy.tscn" id="1_iqtgt"]
 [ext_resource type="Script" path="res://Scripts/Enemies/Necrodog.gd" id="2_nambg"]
-[ext_resource type="Texture2D" uid="uid://byjvt15tci5r" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death1.png" id="3_d0sch"]
-[ext_resource type="Texture2D" uid="uid://bf6rfk2ygrsx1" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death2.png" id="4_nr0p6"]
-[ext_resource type="Texture2D" uid="uid://dqy8l1hgsgi84" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death3.png" id="5_w0cyx"]
-[ext_resource type="Texture2D" uid="uid://bsylu886raawt" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death4.png" id="6_0etb2"]
-[ext_resource type="Texture2D" uid="uid://bmcy8rrmanhsd" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death5.png" id="7_xxqmq"]
-[ext_resource type="Texture2D" uid="uid://djwk0nwpm1lth" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death6.png" id="8_tjgxu"]
-[ext_resource type="Texture2D" uid="uid://da2dodkmr005t" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death7.png" id="9_3rsa4"]
-[ext_resource type="Texture2D" uid="uid://2nioyp0swa8p" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death8.png" id="10_bqgdo"]
-[ext_resource type="Texture2D" uid="uid://bvf42vhscj0lk" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death9.png" id="11_2rjv5"]
-[ext_resource type="Texture2D" uid="uid://l5rxqubwkndv" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death10.png" id="12_5hgj5"]
-[ext_resource type="Texture2D" uid="uid://cimfptcapqf2u" path="res://Assets/Fantasy/Enemies/Skeleton_cute/Death/Skeleton-cute-death11.png" id="13_kjand"]
-[ext_resource type="Texture2D" uid="uid://haryd4fbevyo" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered1.png" id="14_cm41n"]
-[ext_resource type="Texture2D" uid="uid://pch8iqtugd3v" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered2.png" id="15_o2m7l"]
-[ext_resource type="Texture2D" uid="uid://cdsep4x8w8nh3" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered3.png" id="16_vumy4"]
-[ext_resource type="Texture2D" uid="uid://boh2ukfgqynnh" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered4.png" id="17_sp3m2"]
-[ext_resource type="Texture2D" uid="uid://d1dfi6le2texy" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered5.png" id="18_c0ppo"]
-[ext_resource type="Texture2D" uid="uid://dy4aunaayj8hu" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered6.png" id="19_fhl46"]
-[ext_resource type="Texture2D" uid="uid://cba1usyylwec" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered7.png" id="20_kpbld"]
-[ext_resource type="Texture2D" uid="uid://b8k4y4b2i88wd" path="res://Assets/Fantasy/Enemies/Dogs/dog-Recovered8.png" id="21_xmyng"]
+[ext_resource type="Texture2D" uid="uid://b0u4adbuqg4k7" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death1.png" id="3_dbd30"]
+[ext_resource type="Texture2D" uid="uid://cq6bu3ro3iyw4" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death2.png" id="4_b4ypy"]
+[ext_resource type="Texture2D" uid="uid://d2odkqpeecvmd" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death3.png" id="5_ovlaj"]
+[ext_resource type="Texture2D" uid="uid://dg114vb3wvvmd" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death4.png" id="6_7d3ak"]
+[ext_resource type="Texture2D" uid="uid://cb808ic570n57" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death5.png" id="7_yvpqp"]
+[ext_resource type="Texture2D" uid="uid://dtn2f7qi4tvhm" path="res://assets/Fantasy/Enemies/Dogs/Dogs death/Dog-death6.png" id="8_whyuw"]
+[ext_resource type="Texture2D" uid="uid://haryd4fbevyo" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered1.png" id="9_qpbi6"]
+[ext_resource type="Texture2D" uid="uid://pch8iqtugd3v" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered2.png" id="10_q2see"]
+[ext_resource type="Texture2D" uid="uid://cdsep4x8w8nh3" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered3.png" id="11_ijvej"]
+[ext_resource type="Texture2D" uid="uid://boh2ukfgqynnh" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered4.png" id="12_okw18"]
+[ext_resource type="Texture2D" uid="uid://d1dfi6le2texy" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered5.png" id="13_673ne"]
+[ext_resource type="Texture2D" uid="uid://dy4aunaayj8hu" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered6.png" id="14_kykd1"]
+[ext_resource type="Texture2D" uid="uid://cba1usyylwec" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered7.png" id="15_7mm6g"]
+[ext_resource type="Texture2D" uid="uid://b8k4y4b2i88wd" path="res://assets/Fantasy/Enemies/Dogs/Dogs idle/dog-Recovered8.png" id="16_c6rp1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0p2xk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_d0sch")
+"texture": ExtResource("3_dbd30")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_nr0p6")
+"texture": ExtResource("4_b4ypy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_w0cyx")
+"texture": ExtResource("5_ovlaj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_0etb2")
+"texture": ExtResource("6_7d3ak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_xxqmq")
+"texture": ExtResource("7_yvpqp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_tjgxu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_3rsa4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_bqgdo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_2rjv5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_5hgj5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_kjand")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_kjand")
+"texture": ExtResource("8_whyuw")
 }],
 "loop": false,
 "name": &"death",
@@ -67,28 +44,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_cm41n")
+"texture": ExtResource("9_qpbi6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_o2m7l")
+"texture": ExtResource("10_q2see")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_vumy4")
+"texture": ExtResource("11_ijvej")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_sp3m2")
+"texture": ExtResource("12_okw18")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_c0ppo")
+"texture": ExtResource("13_673ne")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_fhl46")
+"texture": ExtResource("14_kykd1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_kpbld")
+"texture": ExtResource("15_7mm6g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_xmyng")
+"texture": ExtResource("16_c6rp1")
 }],
 "loop": true,
 "name": &"default",
@@ -103,9 +80,8 @@ visibility_layer = 2
 position = Vector2(-1.18125, -10.2109)
 scale = Vector2(2.76133, 2.66122)
 sprite_frames = SubResource("SpriteFrames_0p2xk")
+animation = &"death"
 autoplay = "default"
-frame = 1
-frame_progress = 0.831855
 
 [node name="DeathTimer" parent="." index="4"]
 wait_time = 1.0

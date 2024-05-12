@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be6nj52p0h8lj"
-path="res://.godot/imported/star_gold.png-da0c2c838633a9510963d1c149af2289.ctex"
+path="res://.godot/imported/star_gold.png-65c1382e3af23a9ca17a8eea0c080287.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/spaceshooter/PNG/Power-ups/star_gold.png"
-dest_files=["res://.godot/imported/star_gold.png-da0c2c838633a9510963d1c149af2289.ctex"]
+source_file="res://assets/spaceshooter/PNG/Power-ups/star_gold.png"
+dest_files=["res://.godot/imported/star_gold.png-65c1382e3af23a9ca17a8eea0c080287.ctex"]
 
 [params]
 
